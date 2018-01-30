@@ -1,0 +1,103 @@
+% Cambie el numero de la faculdad si es necesario.
+\newcommand{\numeroFaculdad}{2}
+
+% Escribir el titulo de la tesis que va a exponer.
+\newcommand{\tituloTesis}{Método para la integración de datos basado en ontologías\\ aplicado al Control de Autoridades}
+
+% Cambiar el tipo de trabajo si es necesario.
+\newcommand{\nombreTipoTesis}{Trabajo final presentado en opción al título de\\ Máster en Informática Avanzada}
+
+% Cambiar los nombres de los autores.
+\newcommand{\autorUNO}{Ing. Leandro Tabares Martín}
+\newcommand{\autorDOS}{Nombre Autor 2}
+
+% Cambiar el nombre del tutor y co-tutor.
+\newcommand{\tutor}{Dr.C. Yanio Hernández Heredia}
+\newcommand{\coTutor}{Dr.C. Amed Abel Leiva Mederos}
+
+% Cambiar el cargo del tutor y co-tutor
+\newcommand{\cargoTutor}{Cargo del tutor}
+\newcommand{\cargoCoTutor}{Cargo del co-tutor}
+
+% Cambiar la fecha de confección de la tesis. Por defecto es el día de hoy
+\newcommand{\fecha}{\large{junio de 2018}}
+
+\newcommand{\espacios}{\vspace{0.5in}}
+\newcommand{\logo}{\espacios\includegraphics{img/logo}\espacios}
+
+\newcommand{\universidad}{\large{Universidad de las Ciencias Informáticas}}
+\newcommand{\facultad}{\large{Facultad \numeroFaculdad}}
+
+\newcommand{\titulo}{\large{\bf \tituloTesis}\espacios}
+
+\newcommand{\tipoTesis}{\large{\nombreTipoTesis}\espacios}
+
+\newcommand{\autores}
+{
+    \begin{center}
+    \begin{tabular}{rl}
+    \large{\bf Autor:}  & \large{\autorUNO} \\[0.7in]
+    \large{\bf Tutor:}    & \large{\tutor}    \\
+    \large{\bf Co-Tutor:} & \large{\coTutor}
+    \end{tabular}
+    \end{center}
+    \vspace{1.0in}
+}
+
+\newcommand{\ciudadFecha}{\large{\bf Ciudad de la Habana, \fecha}}
+
+\newcommand{\fillDia}{\makebox[0.3in]{\hrulefill}\space}
+\newcommand{\fillMes}{\makebox[1in]{\hrulefill}\space}
+\newcommand{\fillAnno}{\makebox[0.5in]{\hrulefill}}
+
+\newcommand{\firma}{\makebox[2in]{\hrulefill}}
+
+\newcommand{\firmaTesis}
+{
+    \begin{center}
+    \begin{tabular}{cp{0.5in}c}
+        \firma        \\
+        \autorUNO     \\[1in]
+        \firma      &   & \firma        \\
+        \cargoTutor &   & \cargoCoTutor \\
+        \tutor      &   & \coTutor
+    \end{tabular}
+    \end{center}
+}
+
+\newcommand{\comentario}[2][]
+{
+	\todo[caption={#2}, size=\small, #1, inline,color={red!100!green!8},bordercolor=red,linecolor=red]
+	{
+	  \renewcommand{\baselinestretch}{1.2}\selectfont#2\par
+	}
+}
+%Control de viudas y huérfanas(líneas de principio o fin de párrafo que se quedan solas al final o 
+%al inicio de una página)
+\clubpenalty=10000
+\widowpenalty=10000
+
+\definecolor{azul}{rgb}{0.53,0.81,0.98}
+
+
+\newcommand\BackgroundPortada{
+   \put(0,0){
+     \parbox[b][\paperheight]{\paperwidth}{
+       \vfill
+       \centering
+       \includegraphics[width=\paperwidth,height=\paperheight,%
+                        keepaspectratio]{img/portada}%
+       \vfill
+     }}}
+
+% \newcommand\BackgroundPortada{%
+%  \put(0,0){%
+%    \makebox(0,0)[bl]{%
+%      \includegraphics[
+%        width=\paperwidth,
+%        height=\paperheight,
+%        keepaspectratio
+%      ]{img/portada}%
+%    }%
+% }%
+% }

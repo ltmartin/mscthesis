@@ -1,0 +1,71 @@
+\chapter{\large Implementación y prueba.}
+
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{Capítulo 4: Implementación y prueba}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+ \vspace{-1cm}
+
+\begin{enumerate}
+ \item[a] {\bf \lettrine[lines=2, lraise=0, nindent=0em, slope=-.5em]{I}{}mplementación.}
+  \begin{itemize}
+    \item Diagrama de despliegue.
+    \begin{longtable}[c]{|l|}
+      \hline
+      \rowcolor{gray}
+      \multicolumn{1}{|>{\columncolor{Light}}c|}{DIAGRAMA DE DESPLIEGUE}\\
+      \hline
+      \multicolumn{1}{|c|}{(1)}\\
+      \hline
+    \end{longtable}
+    {\bf Leyenda}
+    \begin{enumerate}
+     \item Representación gráfica del diagrama.
+    \end{enumerate}
+
+  \item Diagrama de componentes.
+    \begin{longtable}[c]{|l|}
+      \hline
+      \rowcolor{gray}
+      \multicolumn{1}{|>{\columncolor{Light}}c|}{DIAGRAMA DE COMPONENTES}\\
+      \hline
+      \multicolumn{1}{|c|}{(1)}\\
+      \hline
+    \end{longtable}
+    {\bf Leyenda}
+    \begin{enumerate}
+     \item Representación gráfica del diagrama.
+    \end{enumerate}
+  \end{itemize}
+
+  
+ \item[b] {\bf Modelo de prueba.}
+
+  Descripción de los casos de prueba de integración, para cada caso de uso debe responder al siguiente formato:
+  {%
+  \newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
+    \begin{longtable}{|l|l|l|}
+    \mc{3}{c}{\textbf{Nombre del caso de uso:}}\\
+    \hline
+    \textbf{Entrada} & \textbf{Resultados} & \textbf{Condiciones}\\
+    \hline
+    (1) & (2) & (3)\\
+    \hline
+  \end{longtable}
+   {\bf Leyenda}
+    \begin{enumerate}
+     \item[1.] Descripción textual de lo que ocurre en el mundo real que hace necesario ejecutar el caso de prueba, precisando la información de entrada y los comandos a dar por el actor. Además, se Describe textualmente el estado de la información almacenada.
+     \item[2.] Descripción textual del estado en el que queda la información y las alertas que puedan generarse, una vez ejecutado el caso de uso con los valores y el estado especificado en la entrada.
+     \item[3.] Condiciones que deben cumplirse mientras se ejecuta el caso de prueba.
+    \end{enumerate}
+
+}%
+
+\end{enumerate}
+

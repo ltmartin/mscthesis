@@ -1,0 +1,270 @@
+% Usar papel de carta y fuente de 11 puntos.
+\documentclass[letterpaper,11pt, spanish]{report}
+\usepackage{apacite}
+\usepackage{natbib}
+
+
+% Ajustar los margenes de la hoja (el izquierdo es mayor que el derecho para el encuadernado).
+\usepackage[tmargin=1.5cm, rmargin=1.5cm, bmargin=3cm, lmargin=2.5cm]{geometry}
+
+% Utilización de las codificaciones, latin1 y utf8 para windows y gnu/linux respectivamente.
+\usepackage[latin1,utf8]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc} 
+\usefont{T1}{arial}{m}{n}
+
+\usepackage{ucs}
+
+
+% Darle posicion fija a las imagenes
+\usepackage{float}
+
+% Utilizar el idioma español para la división de palabras en sílabas al final del renglón.
+\usepackage[spanish,activeacute]{babel}
+
+% El paquete graphicx maneja los graficos que se generan en el documento.
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{eso-pic}
+
+% El paquete acronym brinda la posibilidad de utilizar los acronimos de forma sencilla.
+\usepackage[printonlyused]{acronym}
+
+% El paquete fancyhdr es usado para las cabeceras de página (headers).
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+
+
+% Paquete para pguinas horizontales con: \begin{landscape}\end{landscape}
+\usepackage{pdflscape}
+
+% El paquete hyperref es usado para manejar lon vinculos a referencias en el documento dijital.
+\usepackage{hyperref}
+
+% Configurar el paquete hyperref para que pinte de color negro todos los vinculos.
+\hypersetup{colorlinks=true,
+            linkcolor=black,
+            citecolor=blue,
+            filecolor=black,
+            urlcolor=blue,
+	    pdfsubject = {},
+	    pdftitle = {},
+	    pdfkeywords = {palabra 1, palabra2, hasta 6},
+            pdfauthor= Leandro Tabares Martín
+            }
+ 
+% El paquete titlesec para redefinir las cabeceras de los capítulos
+\usepackage{titlesec}
+
+% Usar interlineado de 1.5
+\renewcommand{\baselinestretch}{1.5}
+
+%Para crear el glosario de terminos
+\usepackage[refpages]{gloss}
+\makegloss
+
+%Paquete para poner la primera línea de un párrafo más grande que las demás
+\usepackage{lettrine}
+\renewcommand{\LettrineFontHook}{\fontfamily{ppl}}%
+
+
+% Fuente clon de Arial
+% \renewcommand{\rmdefault}{phv}
+% \renewcommand{\sfdefault}{phv}
+
+%Para símbolos matemáticos
+\usepackage{amsmath}
+
+%Para poder escribir códigos de otro lenguajes sin problemas
+\usepackage{verbatim}
+
+%Paquete para hacer comentarios
+\usepackage[colorinlistoftodos]{todonotes}
+
+%Paquetes para trabajo con tablas
+\usepackage{longtable}
+\usepackage{colortbl}
+\definecolor{Light}{gray}{.80}
+\definecolor{Dark}{gray}{.20}
+
+%Aquí se definen las extensiones de las imagenes que se van a usar
+\DeclareGraphicsExtensions{.jpg, .bmp, .png}
+
+%Incluye la bibliografía en el índice
+\usepackage[nottoc]{tocbibind}
+
+% Incluir el fichero donde se definen o redefinen algunos comandos
+\input{configuracion}
+
+% Para determinar la profundidad del indice en las secciones
+% \usepackage{tocloft}
+% Numeración hasta las subsubsecciones
+\setcounter{secnumdepth}{3}
+% Incluye en el índice hasta las subsubsecciones
+\setcounter{tocdepth}{3}
+% \setlength{\cftsubsubsecnumwidth}{5em}
+% \setcounter{chapter}{4}
+
+\usepackage{listings}
+
+% Para evitar la partición de palabras
+\usepackage[none]{hyphenat}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% Reducir el espacio vertical en el comienzo de los chapters
+% \makeatletter
+% \def\@makechapterhead#1{%
+%  %\vspace*{50\p@}%
+%   {\parindent \z@ \raggedright \normalfont
+%     \ifnum \c@secnumdepth >\m@ne
+%         \huge\bfseries \@chapapp\space \thechapter
+%         \par\nobreak
+%         \vskip 20\p@
+%     \fi
+%     \interlinepenalty\@M
+%     \Huge \bfseries #1\par\nobreak
+%     \vskip 40\p@
+%   }} 
+% \makeatother
+
+% Redefiniendo el estilo de las paginas para que el numero aparezca a la derecha
+\pagestyle{fancy}
+\addtolength{\headheight}{\baselineskip}
+\fancyfoot{}            % Limpiando todos los campos de los pie de paginas
+\fancyfoot[R]{\thepage} % Estableciendo como pie de pagina el numero a la derecha
+\fancypagestyle{plain}{ % Cambiado las paginas con estilo plain a fancy.
+  \fancyhf{}
+  \fancyfoot[R]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+% ----------------------- Cambiar formato de capítulo -------------------------
+\newcommand{\bigrule}{\titlerule[1.0mm]}              % Definiendo la linea gruesa que aparece.
+\titleformat{\chapter}[display]{\bfseries\Huge}       % se usaran caracteres de tamano Huge en negrita
+{ % contenido de la etiqueta
+  \titlerule[1.0mm]                                   % linea horizontal
+  \filright                                           % texto alineado a la derecha
+  \Large\chaptertitlename\                            % "Capitulo, Apendice" en tamano \Large en lugar de \Huge
+  \Large\thechapter                                   % numero de capitulo en tamano \Large
+}
+{0cm}                                                 % espacio minimo entre etiqueta y cuerpo
+{\filright}                                           % texto del cuerpo alineado a la derecha
+[\vspace{0.5mm}\bigrule] \titlespacing{\chapter}{0.5mm}{-15mm}{15mm}
+
+
+\begin{document}
+
+\begin{titlepage}
+  \AddToShipoutPicture*{\BackgroundPortada}
+    \begin{center}
+
+%   Nombre de la universidad:
+    \universidad
+
+%   Faculdad a la que pertenece:
+    \facultad
+
+%   Logo de la universidad
+    \logo
+
+%   Titulo de la tesis:
+    \titulo
+
+%   Tipo de tesis:
+    \tipoTesis
+    
+
+%   Autores y tutores de la tesis
+    \autores
+
+%   Lugar y fecha de confección de la tesis
+    \ciudadFecha
+
+    \end{center}
+\end{titlepage}
+		%Para renombrar los nombres de table y figure por tabla y figura respectivamente.
+    \renewcommand{\tablename}{Tabla}
+    \renewcommand{\figurename}{Figura}
+
+
+    \pagestyle{plain}
+    %Numeración romana de estas páginas que no van al índice
+    %\pagenumbering{roman}
+    \pagenumbering{arabic}
+%     \rhead{\large Agradecimientos}
+    \include{agradecimientos}
+    \newpage
+    
+%     \rhead{\large Dedicatoria}
+    \include{dedicatoria}
+    \newpage
+
+    \include{autoria}
+    \newpage
+
+    \rhead{\large Resumen}
+    \include{resumen}
+    \newpage
+
+    \def\contentsname{\large ÍNDICE}
+    \tableofcontents % Índice general
+    \newpage
+    \def\listfigurename{\large Índice de figuras}
+    \listoffigures % Índice de figuras
+    \newpage
+    \def\listtablename{\large Índice de tablas}
+    \listoftables % Índice de tablas
+    \newpage
+
+
+%   \pagestyle{fancy}
+    %\pagenumbering{arabic}
+%   \rhead{Introduccion}
+    \include{introduccion}
+    \newpage
+   
+    \renewcommand{\chaptermark}[1]{\markright{\hfill \chaptername \space \thechapter.\ #1.}}
+    \rhead{\chaptermark}
+    \include{capitulo1}
+    \include{capitulo2}
+    \include{capitulo3}
+    \include{capitulo4}
+
+    \rhead{\large Conclusiones}
+    \include{conclusiones}
+    \pagebreak
+% 
+    \rhead{\large Recomendaciones}
+    \include{recomendaciones}
+    \pagebreak
+% 
+    % Glasario de términos
+    \def\glossname{\large Glosario de términos}
+    \rhead{Glosario de términos}
+    \gloss[nocite]{*}
+    \printgloss{glosario}
+    \pagebreak
+
+    \renewcommand{\chaptermark}[1]{\markright{\hfill Apéndice \space \thechapter.\ #1.}}
+% 
+     %Para cambiarle el nombre a la bibliografia
+    \renewcommand\bibname{\large Referencias bibliográficas}
+    \rhead{\MakeUppercase{\textit{ Referencias bibliográficas}}}
+   
+	\bibliography{tesis} 
+	\bibliographystyle{apacite}
+%    \bibliography{tesisReferencias}
+    
+
+    \include{bibliografia}
+    \pagebreak
+% 
+%     \rhead{\chaptermark}
+    \include{anexos}
+    
+    %COMENTARIAR O ELIMINAR
+    \include{ejemplos}
+
+\end{document}
