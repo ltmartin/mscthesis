@@ -178,16 +178,26 @@ Los Datos Enlazados Abiertos son un conjunto de principios y buenas prácticas p
 El primer principio propone el uso de URIs para identificar no solo documentos web y contenido digital, sino que sirva además para referenciar a objetos del mundo real y conceptos abstractos. El segundo principio propone el uso de URIs basadas en el protocolo HTTP para identificar objetos y conceptos abstractos, posibilitando que estas URIs estén desreferenciadas sobre dicho protocolo y en cambio proporcionen una descripción del objeto o concepto identificado. El tercer principio propone el uso del modelo de datos RDF para publicar datos estructurados en la Web. El cuarto principio propone el uso de enlaces para enlazar no solo documentos web, sino cualquier tipo de recurso \citep{Hidalgo-Delgado2015}.
 
 \section{Integración de datos}
-Actualmente la existencia, competitividad y rentabilidad de diversas compañías depende de los flujos de datos. Sin embargo, la variedad de fuentes, tipos y volúmenes de datos ha vuelto más complejo el proceso de encontrarlos \citep{AloomaInc.2017}. Para afrontar esta tarea existen herramientas informáticas conocidas como ``Herramientas de Extracción, Transformación y Carga'' (``Extract, Transform, and Load'' - ETL, por sus siglas de acuerdo al término en idioma inglés). Los principales propósitos de una herramienta ETL según \cite{AloomaInc.2017} son:
+Actualmente la existencia, competitividad y rentabilidad de diversas compañías depende de los flujos de datos. Sin embargo, la variedad de fuentes, tipos y volúmenes de datos ha vuelto más complejo el proceso de encontrarlos \citep{AloomaInc.2017}. La integración de datos se refiere a las técnicas involucradas en combinar los datos almacenados en diferentes ubicaciones en una vista común integrada \citep{Michel2017}. La disponibilidad de recursos de información heterogéneos y distribuidos ha conducido a considerar aproximaciones para la integración de datos en los que fuentes de datos independientes puedan participar en federaciones virtuales de datos. Mientras que los almacenes de datos son repositorios rígidos controlados por las premisas de una sola compañía, las nuevas necesidades de información deben acomodarse a la adición oportuna de nuevas fuentes de datos provenientes de instituciones independientes.
+
+Por otra parte, la semántica de los datos almacenados en ocasiones no es descrita por los esquemas de bases de datos. Hasta cierto punto la semántica implícita de los datos se puede inferir a partir de las restricciones de integridad o patrones de diseño de bases de datos comunes, pero la semántica adicional se encuentra codificada en las aplicaciones que consumen las fuentes de datos. Además, frecuentemente los esquemas de bases de datos se optimizan por cuestiones de rendimiento, resultando en una mezcla de la semántica de los datos con aspectos técnicos. Por estas razones, los métodos utilizados para la integración de datos en la Web deben poseer la capacidad de capturar y compartir conceptualizaciones formales comunes en una manera explícita 
+procesable por computadoras. Esto convencionalmente se logra por medio de la utilización de vocabularios controlados, tesauros y ontologías.
+
+\subsection{Principios para la integración de datos}
+Convencionalmente, un sistema para la integración de datos $\Psi$ se denota por la tupla $<\Gamma , \Upsilon , \Sigma>$ donde:
 
 \begin{itemize}
-\item Extraer datos de bases de datos legadas (usualmente heterogéneas).
-\item Transformar los datos (de datos optimizados para transacciones a datos optimizados para el análisis).
-\item Sincronización y limpieza de los datos.
-\item Carga de los datos en un almacén de datos.
+\item $\Gamma$ es el esquema global utilizado para representar la vista unificada.
+\item $\Upsilon$ son las fuentes de datos representadas por el conjunto de esquemas locales $\upsilon_1 , \cdots , \upsilon_n$.
+\item $\Sigma$ especifica las correspondencias entre los conceptos de los esquemas locales y los conceptos del esquema global.
 \end{itemize}
 
-Con el propósito de identificar posibles herramientas ETL que permitiesen realizar una integración de datos sin despreciar la semántica de los mismos se analizó una muestra definida por \cite{AloomaInc.2017}. El criterio de comparación que se escogió fue el mecanismo para la descripción de los datos.
+Dependiendo de los lenguajes de modelado utilizados para definir los esquemas locales y globales, los conceptos pueden ser clases de una ontología, tablas de una base de datos, objetos, entre otros.
+
+Un sistema para la integración de datos responde a consultas formuladas en términos del esquema global $\Gamma$ reformulándolas en las consultas correspondientes sobre las fuentes de datos $\upsilon_1 , \cdots , \upsilon_n$ por medio de la información almacenada en $\Sigma$. Con respecto a la forma en que se expresan los mapeos se han propuesto dos enfoques principales: el enfoque ``Global-como-Vista'', en el que el esquema global se expresa en términos de consultas (o vistas) sobre los esquemas locales; mientras que en el enfoque ``Local-como-Vista'', los esquemas globales se expresan en términos de consultas (o vistas) sobre el esquema global. Estos enfoques han sido abundantemente descritos en la literatura \citep{Doan:2012:PDI:2401764,Lenzerini:2002:DIT:543613.543644}.
+
+\subsection{Sistemas para la integración de datos basados en RDF}
+
 
 \subsection{Integración de datos basada en ontologías}
 sdfsdf
