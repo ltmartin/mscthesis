@@ -194,16 +194,31 @@ Convencionalmente, un sistema para la integración de datos $\Psi$ se denota por
 
 Dependiendo de los lenguajes de modelado utilizados para definir los esquemas locales y globales, los conceptos pueden ser clases de una ontología, tablas de una base de datos, objetos, entre otros.
 
-Un sistema para la integración de datos responde a consultas formuladas en términos del esquema global $\Gamma$ reformulándolas en las consultas correspondientes sobre las fuentes de datos $\upsilon_1 , \cdots , \upsilon_n$ por medio de la información almacenada en $\Sigma$. Con respecto a la forma en que se expresan los mapeos se han propuesto dos enfoques principales: el enfoque ``Global-como-Vista'', en el que el esquema global se expresa en términos de consultas (o vistas) sobre los esquemas locales; mientras que en el enfoque ``Local-como-Vista'', los esquemas globales se expresan en términos de consultas (o vistas) sobre el esquema global. Estos enfoques han sido abundantemente descritos en la literatura \citep{Doan:2012:PDI:2401764,Lenzerini:2002:DIT:543613.543644}.
+Un sistema para la integración de datos responde a consultas formuladas en términos del esquema global $\Gamma$ reformulándolas en las consultas correspondientes sobre las fuentes de datos $\upsilon_1 , \cdots , \upsilon_n$ por medio de la información almacenada en $\Sigma$. Con respecto a la forma en que se expresan los mapeos se han propuesto dos enfoques principales: el enfoque ``Global-como-Vista'' (``Global-as-View'' - GAV, por sus siglas de acuerdo al término en idioma inglés), en el que el esquema global se expresa en términos de consultas (o vistas) sobre los esquemas locales; mientras que en el enfoque ``Local-como-Vista'' (``Local-as-View'' - LAV, por sus siglas de acuerdo al término en idioma inglés), los esquemas globales se expresan en términos de consultas (o vistas) sobre el esquema global. Estos enfoques han sido abundantemente descritos en la literatura \citep{Doan:2012:PDI:2401764,Lenzerini:2002:DIT:543613.543644}.
 
-\subsection{Sistemas para la integración de datos basados en RDF}
+Variados son los sistemas propuestos para la integración de datos basados en RDF, unos en forma de motores de consultas federados sobre SPARQL \citep{Schwarte:2011:FOT:2063016.2063055,Gorlitz:2011:SSE:2887352.2887354,Corby:2012:KVI:2457524.2457672,macina2016sparql} y otros como fragmentos de Datos Enlazados \citep{VERBORGH2016184}. Sin embargo, los enfoques de estos sistemas no se pueden clasificar claramente como GAV o LAV porque sus objetivos son producir planes de consultas eficientes sobre fuentes de datos distribuidas que soportan SPARQL sin la mediación de un esquema.
 
+\subsection{Acceso e Integración de Datos Basado en Ontologías}
+El ``Acceso a Datos Basado en Ontologías'' (``Ontology-based Data Access'' - OBDA, por sus siglas de acuerdo al término en idioma inglés) es un dominio de la Integración de Datos que propone la utilización de ontologías para crear una capa conceptual formal; en esta capa la ontología representa el dominio de los datos almacenados en la fuente de datos y el mapeo describe las relaciones entre la ontología y la fuente de datos \citep{Calvanese:2015:SOY:2991147.2991152,KHARLAMOV20173}. \cite{Tabares-Martin2016} definen formalmente un sistema OBDA como una tupla \( \Omega = <\tau,\sigma,\mu> \) donde:
 
-\subsection{Integración de datos basada en ontologías}
-sdfsdf
+\begin{itemize}
+ 	\item \(\tau\) es la parte terminológica de la ontología. Se consideran ontologías basadas en Lógica Descriptiva, por lo que $\tau$ es una TBox según la Lógica Descriptiva.
+ 	\item $\sigma$ es el conjunto de fuentes de datos.
+ 	\item $\mu$ es un conjunto de mapeos, cada uno de la forma $\Phi(x) \leftarrow \Xi(x)$ donde:
+ 	\begin{itemize}
+ 		\item[•] $\Phi(x)$ es una consulta sobre $\sigma$, retornando las tuplas de valor para $x$.
+ 		\item[•] $\Xi(x)$ es una consulta sobre $\tau$ cuyas variables libres provienen de $x$.
+ 	\end{itemize}
+\end{itemize}
+
+La ontología en el paradigma OBDA provee un punto de acceso único para un acceso a datos semántico destinado a los consumidores de datos, a la vez que permite exportar los datos de las fuentes integradas en un formato semántico o ejecutar consultas en términos de un modelo conceptual orientado al usuario que lo abstraen de los detalles a nivel de implementación que comúnmente se encuentran en los esquemas de bases de datos \citep{KHARLAMOV20173}. Por otra parte, los expertos en el dominio son capaces de expresar las necesidades de información en sus propios términos sin conocimiento previo sobre la forma en que están estructurados los datos en la fuente, a la vez que reciben las respuestas a sus consultas en los términos definidos en la ontología.
+
+La ``Integración de Datos Basada en Ontologías'' (``Ontology-based Data Integration'' - OBDI, por sus siglas de acuerdo al término en idioma inglés) es un caso más general de OBDA en el cual las organizaciones gestionan de forma integrada diferentes fuentes de datos por medio del paradigma OBDA. La OBDI se ha utilizado en trabajos como los descritos por \cite{Calvanese2016,Daraio2016,Kharlamov:2016:OIS:2882903.2899385}
 
 \section{Conclusiones parciales}
-dfsdfs
+El objetivo que persigue este trabajo es desarrollar un método con componentes semánticos que permita la integración en una aplicación informática de datos relativos al Control de Autoridades almacenados de forma heterogénea. En este capítulo se abordó el Control de Autoridades realizando un análisis histórico de su desarrollo. Posteriormente se analizaron diferentes elementos que forman parte de las tecnologías de la Web Semántica y que posibilitan describir semánticamente los datos almacenados en fuentes estructuralmente heterogéneas. Luego se examinaron principios para la integración de datos, haciendo énfasis en la integración semántica de datos.
+
+Al realizar la revisión bibliográfica respectiva al estado del arte de la temática se evidenciaron diferentes aproximaciones que posibilitan la integración semántica de datos, siendo la Integración de Datos Basada en Ontologías una de las más promisorias. Sin embargo, a pesar de que se describen los elementos que intervienen en la OBDI, en la literatura revisada no se especifica un método para llevarla a cabo.
 
 
 
