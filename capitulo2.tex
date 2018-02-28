@@ -20,8 +20,43 @@ Las ciencias del diseño crean y evalúan artefactos orientados a mejorar y ente
 La presente investigación fue desarrollada según el proceso definido por \cite{Peffers2006} para las investigaciones en ciencias del diseño. Este proceso propone seis actividades secuenciales: identificación del problema y motivación, objetivos de la solución, diseño y desarrollo, demostración, evaluación y comunicación. Los resultados de la primera y segunda actividad fueron expresados en la introducción de este documento. El diseño y desarrollo incluye determinar las funcionalidades deseadas del artefacto y su arquitectura para luego crear el artefacto en cuestión. Los elementos esenciales que debe poseer una aplicación informática para el OBDA/OBDI se sintetizan en el subepígrafe \ref{Acceso e Integración de Datos Basado en Ontologías}. Los artefactos
 creados serán descritos en los epígrafes siguientes, mientras que la demostración de su eficacia en la solución del problema, así como la observación y medición de su desempeño relativos a las actividades cuatro y cinco del proceso serán expuestas en el Capítulo \ref{Capítulo 3}. Como evidencia de la comunicación a otros investigadores del problema abordado en la investigación y su relevancia, el artefacto creado, su utilidad y su efectividad, se encuentran artículos publicados en revistas y trabajos presentados en eventos por el autor de esta investigación.
 
-\subsection{Constructos asociados a la Integración de Datos Basada en Ontologías}
-El método propuesto para la Integración de Datos Basada en Ontologías se denomina OntoIntegra. Este método describe el proceso para la integración de los datos almacenados en fuentes de datos estructuralmente heterogéneas en una respuesta conceptualmente homogénea, a partir de la instanciación de una ontología creada para la OBDI. El método se basa en los constructos: consulta sintáctica y ontología para OBDI.
+El método propuesto para la Integración de Datos Basada en Ontologías se denomina OntoIntegra. Este método describe el proceso para la integración de los datos almacenados en fuentes de datos estructuralmente heterogéneas en una respuesta conceptualmente homogénea, a partir de la instanciación de una ontología creada para la OBDI. El método se basa en los constructos: consulta sintáctica y instancia de una ontología.
 
 \textbf{Definición 2.1.1} \textit{Una consulta sintáctica es la secuencia textual de instrucciones que permite recuperar información almacenada en al menos una fuente de datos.}
+
+\textbf{Definición 2.1.2} \textit{Sea una ontología compuesta por una parte conceptual (T-Box) y una parte asercional (A-Box). Se denomina instancia de la ontología a su parte asercional.}
+
+\subsection{OntoIntegra. Aspectos generales}
+El aporte teórico fundamental de esta investigación es un método para la integración semántica de datos almacenados en fuentes estructuralmente heterogéneas. La figura \ref{fig: metodoOntoIntegra} ilustra el método propuesto, denominado OntoIntegra. Este método describe la obtención de información conceptualmente integrada a través de cinco pasos fundamentales:
+
+\begin{enumerate}
+\item Análisis estructural de cada fuente de datos.
+\item Análisis semántico de la información almacenada en cada fuente de datos.
+\item Instanciación de la ontología para OBDI.
+\item Publicación de la instancia de la ontología creada.
+\item Consumo por una aplicación informática de la instancia de la ontología creada.
+\end{enumerate}
+
+\begin{figure}
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{img/Metodo_OntoIntegra.png}
+\end{center}
+\caption{Esquema representativo del método OntoIntegra}
+\label{fig: metodoOntoIntegra}
+\end{figure}
+
+El análisis estructural de cada fuente de datos tiene como objetivo identificar la forma en que se encuentran estructurados los datos a recuperar, formulando la consulta sintáctica adecuada a este proceso.
+
+\subsection{Construcción de la ontología para OBDI}
+
+Según \cite{Calvanese2017} los elementos básicos que debe poseer una ontología diseñada con el propósito de permitir la OBDI son los definidos en la ontología \ref{onto:elementosBasicosOntologiaOBDI}.
+
+\begin{equation}
+Concepto \equiv Thing \sqcap \exists mapeo.Literal
+\label{onto:elementosBasicosOntologiaOBDI}
+\end{equation}
+
+
+
+
 
