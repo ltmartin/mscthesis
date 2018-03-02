@@ -26,7 +26,7 @@ El método propuesto para la Integración de Datos Basada en Ontologías se deno
 
 \textbf{Definición 2.1.2} \textit{Sea una ontología compuesta por una parte conceptual (T-Box) y una parte asercional (A-Box). Se denomina instancia de la ontología a su parte asercional.}
 
-\subsection{OntoIntegra. Aspectos generales}
+\section{OntoIntegra. Aspectos generales}
 El aporte teórico fundamental de esta investigación es un método para la integración semántica de datos almacenados en fuentes estructuralmente heterogéneas. La figura \ref{fig: metodoOntoIntegra} ilustra el método propuesto, denominado OntoIntegra. Este método describe la obtención de información conceptualmente integrada a través de cinco pasos fundamentales:
 
 \begin{enumerate}
@@ -45,9 +45,27 @@ El aporte teórico fundamental de esta investigación es un método para la inte
 \label{fig: metodoOntoIntegra}
 \end{figure}
 
-El análisis estructural de cada fuente de datos tiene como objetivo identificar la forma en que se encuentran estructurados los datos a recuperar, formulando la consulta sintáctica adecuada a este proceso.
+\section{Análisis estructural de cada fuente de datos}
 
-\subsection{Construcción de la ontología para OBDI}
+El análisis estructural de cada fuente de datos tiene como objetivo identificar la forma en que se encuentran estructurados los datos a recuperar, formulando la consulta sintáctica adecuada a este proceso. En el caso de las bases de datos relacionales, el ``Lenguaje de Consultas Estructurado'' (``Structured Query Language'' - SQL, por sus siglas de acuerdo al término en idioma inglés) constituye el estándar para la recuperación de datos \citep{Eisenberg:1999:SFK:309844.310075}.
+
+\section{Análisis semántico de la información almacenada en cada fuente de datos}
+
+El análisis semántico de la información almacenada en cada fuente de datos pretende determinar los conceptos contenidos en las mismas cuyos datos asociados se desean recuperar.
+
+\section{Instanciación de la ontología para la integración de datos}
+
+La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada.
+
+\section{Publicación de la instancia de la ontología creada}
+
+La publicación de la instancia de la ontología creada se refiere a la carga en un almacén de tripletas RDF de la instancia creada.
+
+\section{Consumo por una aplicación informática de la instancia de la ontología creada}
+
+El consumo por una aplicación informática de la instancia de la ontología creada procura, a partir de la definición terminológica de la ontología, obtener su instanciación y utilizarla para recuperar los datos requeridos.
+
+\section{Construcción de la ontología para OBDI}
 
 Según \cite{Calvanese2017} los elementos básicos que debe poseer una ontología diseñada con el propósito de permitir la OBDI son los definidos en la ontología \ref{onto:elementosBasicosOntologiaOBDI}.
 
