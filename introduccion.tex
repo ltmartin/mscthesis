@@ -29,6 +29,16 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \vspace{-1cm}
 
+El proyecto ``Tecnologías de la Información y la Comunicación apoyando los procesos educativos y la gestión del conocimiento en educación'' (ELINF) tiene como objetivo aumentar la capacidad de las universidades asociadas para diseñar y aplicar apropiadamente las Tecnologías de la Información y la Comunicación (TIC). Para cumplimentar esta meta se está desarrollando una plataforma nacional que sustente los servicios educacionales y de información en todas las universidades cubanas. Los sistemas integrados de gestión bibliotecaria, sistemas para la gestión de repositorios digitales, sistemas para la gestión de investigaciones y entornos virtuales de aprendizaje forman parte del modelo de referencia de ELINF como se ilustra en la figura \ref{fig: referenceModel}. Las herramientas informáticas que constituyen la instanciación del modelo \ref{fig: referenceModel} gestionan, entre otros elementos, artículos científicos y libros.
+
+\begin{figure}
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{img/referenceModel.png}
+\end{center}
+\caption{Modelo de referencia del proyecto ELINF. Fuente: Informe de autoevaluación de la primera fase del proyecto ELINF.}
+\label{fig: referenceModel}
+\end{figure}
+
 En la redacción de artículos científicos se pueden encontrar variaciones de los nombres de un mismo autor, un autor puede tener varios nombres en artículos diferentes y varios autores pueden compartir el mismo nombre. Esta ambigüedad afecta el rendimiento de la recuperación de los documentos, la integración a nivel de bases de datos y puede causar atribuciones de autorías indebidas al aparecer los recursos descritos en los catálogos bajo un autor incorrecto \citep{Han2005}. En las bibliotecas, museos o en archivos un catálogo es un conjunto de datos organizados describiendo los recursos de información gestionados por la institución \citep{InternationalFederationofLibraryAssociationsandInstitutions2009}, mientras que las personas encargadas de formar estos catálogos se denominan catalogadores \citep{RealAcademiaEspanola2014}. Durante al menos siglo y medio los catalogadores han documentado sus decisiones acerca de cómo la forma autorizada del nombre de una persona debería ser representada en sus catálogos \citep{Tillett2009}, sin embargo, según \cite{Carrasco2016} algunos tipos de inconsistencias que se encuentran frecuentemente en los nombres registrados en los catálogos son:
 
 \begin{itemize}
@@ -39,7 +49,7 @@ En la redacción de artículos científicos se pueden encontrar variaciones de l
 \item Eliminación de diacríticos.
 \end{itemize}
 
-Con la finalidad de evitar inconsistencias en los catálogos se realiza el Control de Autoridades, el cual es el proceso de seleccionar una forma de un nombre y almacenarla, así como sus variantes y las fuentes de datos utilizadas en el proceso \citep{Sandberg2016}. Según \cite{Carrasco2016} este procedimiento sirve para dos propósitos fundamentales:
+Con la finalidad de evitar inconsistencias en los catálogos se realiza el Control de Autoridades, siendo este uno de los pilares del modelo de referencia del proyecto ELINF. El Control de Autoridades es el proceso de seleccionar una forma de un nombre y almacenarla, así como sus variantes y las fuentes de datos utilizadas en el proceso \citep{Sandberg2016}. Según \cite{Carrasco2016} este procedimiento sirve para dos propósitos fundamentales:
 
 \begin{itemize}
 \item Distinguir creadores que han publicado bajo el mismo nombre por medio de la adición de títulos y otras palabras asociadas con el nombre o incluyendo información sobre las fechas de nacimiento, muerte y actividad del mismo.
@@ -76,7 +86,7 @@ Con el advenimiento de la Web, la gestión de datos se enfocó en la variedad de
 
 Teniendo en cuenta la heterogeneidad estructural de las fuentes de datos disponibles actualmente para realizar el Control de Autoridades en el proyecto ELINF se establece como \textbf{problema de investigación} el siguiente: ¿Cómo integrar los datos relativos al Control de Autoridades almacenados de forma heterogénea en las fuentes de datos utilizadas por el proyecto ELINF?
 
-El problema de investigación se enmarca en el \textbf{objeto de estudio} los métodos para la integración semántica en la Web de datos almacenados de forma heterogénea y como \textbf{campo de acción} el mecanismo para integrar datos relativos al Control de Autoridades en la aplicación informática AUCTORITAS.
+El problema de investigación se enmarca en el \textbf{objeto de estudio} los métodos para la integración semántica en la Web de datos almacenados de forma heterogénea y como \textbf{campo de acción} el método para integrar datos relativos al Control de Autoridades en el proyecto ELINF.
 
 Esta investigación se propone como \textbf{objetivo general} desarrollar un método con componentes semánticos que permita la integración en una aplicación informática de datos relativos al Control de Autoridades almacenados de forma heterogénea en las fuentes de datos utilizadas por el proyecto ELINF. Como \textbf{objetivos específicos} se definen los siguientes:
 
@@ -88,7 +98,25 @@ Esta investigación se propone como \textbf{objetivo general} desarrollar un mé
 
 Se plantea como \textbf{hipótesis de la investigación} que, si se desarrolla un método con componentes semánticos para la integración de datos almacenados de forma heterogénea, entonces será posible integrar los datos relativos al Control de Autoridades almacenados en las fuentes de datos utilizadas por el proyecto ELINF.
 
-A partir de la hipótesis se identifica como variable independiente el \textbf{método con componentes semánticos} el cual se define como el conjunto de actividades \citep{Offermann2010} que permitirá conducir el proceso de descripción e integración de datos almacenados de forma heterogénea. Como variable dependiente se identifica la \textbf{integración de los datos relativos al Control de Autoridades almacenados en las fuentes de datos utilizadas por el proyecto ELINF}.
+A partir de la hipótesis se identifica como variable independiente el \textbf{método con componentes semánticos} el cual se define como el conjunto de actividades \citep{Offermann2010} que permitirá conducir el proceso de descripción e integración de datos almacenados de forma heterogénea. Como variable dependiente se identifica la \textbf{integración de los datos} relativos al Control de Autoridades almacenados en las fuentes de datos utilizadas por el proyecto ELINF.
+
+
+\begin{table}
+\centering
+\begin{tabular}{c|c|c}
+\hline 
+Variable & Dimensión & Indicadores \\ 
+\hline 
+Método con componentes semánticos & Etapas que lo componen & Artefactos generados \\ 
+\hline 
+Integración de los datos & Fuentes integradas & Conceptos integrados \\
+ & & Estructura de la fuente \\ 
+ \hline
+\end{tabular} 
+\label{tabla:operacionalizacion}
+\caption{Operacionalización de las variables de la investigación}
+\end{table}
+
 
 Durante toda la investigación se utilizará el método analítico - sintético, el mismo permitirá descomponer las problemáticas que se presenten en sus componentes y relaciones. La síntesis permitirá descubrir las relaciones esenciales existentes entre los componentes de las problemáticas contribuyendo a la sistematización del conocimiento. 
 

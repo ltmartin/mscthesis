@@ -47,15 +47,34 @@ El aporte teórico fundamental de esta investigación es un método para la inte
 
 \section{Análisis estructural de cada fuente de datos}
 
-El análisis estructural de cada fuente de datos tiene como objetivo identificar la forma en que se encuentran estructurados los datos a recuperar, formulando la consulta sintáctica adecuada a este proceso. En el caso de las bases de datos relacionales, el ``Lenguaje de Consultas Estructurado'' (``Structured Query Language'' - SQL, por sus siglas de acuerdo al término en idioma inglés) constituye el estándar para la recuperación de datos \citep{Eisenberg:1999:SFK:309844.310075}.
+El análisis estructural de cada fuente de datos tiene como objetivo identificar la forma en que se encuentran estructurados los datos a recuperar, formulando la consulta sintáctica adecuada a este proceso. En este paso interviene un Experto del dominio, el cual es una persona que conoce en detalle la estructura de los datos gestionados por la fuente de datos en cuestión. En el caso de las bases de datos relacionales, el ``Lenguaje de Consultas Estructurado'' (``Structured Query Language'' - SQL, por sus siglas de acuerdo al término en idioma inglés) constituye el estándar para la recuperación de datos \citep{Eisenberg:1999:SFK:309844.310075}. Este tipo de bases de datos se ha utilizado durante más de dos décadas \citep{BUCKLES1993660,Hristidis2002670,10.1007/978-981-10-8276-4_22}, por lo que gran parte de los datos almacenados a nivel mundial se encuentran sobre el modelo relacional.
+
+Las bases de datos no relacionales, incluyendo las jerárquicas, orientadas a grafos y orientadas a objetos existen desde finales de la década de 1960 \citep{Leavitt2010}. Con el surgimiento y desarrollo de la Web 3.0, las bases de datos orientadas a grafos que soportan el modelo de datos RDF han ganado popularidad \citep{Zaki2017,BRISABOA2017106}. El lenguaje ``Protocolo SPARQL y Lenguaje de Consulta RDF'' (``SPARQL Protocol and RDF Query Language'' - SPARQL, por sus siglas de acuerdo al término en idioma inglés) es la recomendación del ``Consorcio de la World Wide Web'' (``World Wide Web Consortium'' - W3C, por sus siglas de acuerdo al término en idioma inglés) para la consulta sobre grafos RDF \citep{W3CSPARQLWorkingGroup2013}.
+
+Cada vez son más los servicios que se publican en la Web usando REST \citep{Pautasso2014}. El estilo de arquitectura REST enfatiza la escalabilidad de las interacciones entre los componentes de las aplicaciones informáticas y promueve la reutilización de los componentes reduciendo su acoplamiento \citep{Pautasso2014}. Resulta posible considerar aplicaciones externas que exponen sus datos a través de REST como fuentes de datos. En este caso, el análisis estructural de la fuente de datos se centraría en la estructura sintáctica que debe poseer la petición a formular para extraer los datos a integrar.
 
 \section{Análisis semántico de la información almacenada en cada fuente de datos}
 
-El análisis semántico de la información almacenada en cada fuente de datos pretende determinar los conceptos contenidos en las mismas cuyos datos asociados se desean recuperar.
+El análisis semántico de la información almacenada en cada fuente de datos pretende determinar los conceptos contenidos en las mismas cuyos datos asociados se desean recuperar. En este paso interviene un Experto del dominio y un Ingeniero de conocimiento. El Ingeniero de conocimiento tiene la función de traducir los elementos presentes en una fuente de datos a conceptos comprensibles por un usuario externo.
+
+En este paso un Usuario de conceptualización requiere ciertos conceptos sobre un dominio en específico, esta petición se la realiza a un Experto del dominio. El Experto del dominio determina exactamente qué elementos del dominio son los que necesita el Usuario de conceptualización y se lo informa al Ingeniero de conocimiento. El Ingeniero de conocimiento modela conceptualmente los elementos recibidos en términos conocidos por el Usuario de conceptualización y retorna la conceptualización elaborada. Este proceso se ilustra en la figura \ref{fig: conceptsExtraction}.
+
+\begin{figure}
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{img/conceptsExtraction.png}
+\end{center}
+\caption{Secuencia realizada en el paso Análisis semántico de la información almacenada en cada fuente de datos}
+\label{fig: conceptsExtraction}
+\end{figure}
 
 \section{Instanciación de la ontología para la integración de datos}
 
-La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada.
+La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada. Según \cite{Calvanese2017} los elementos básicos que debe poseer una ontología diseñada con el propósito de permitir la OBDI son los definidos en la ontología \ref{onto:elementosBasicosOntologiaOBDI}.
+
+\begin{equation}
+Concepto \equiv Thing \sqcap \exists mapeo.Literal
+\label{onto:elementosBasicosOntologiaOBDI}
+\end{equation}
 
 \section{Publicación de la instancia de la ontología creada}
 
@@ -65,14 +84,7 @@ La publicación de la instancia de la ontología creada se refiere a la carga en
 
 El consumo por una aplicación informática de la instancia de la ontología creada procura, a partir de la definición terminológica de la ontología, obtener su instanciación y utilizarla para recuperar los datos requeridos.
 
-\section{Construcción de la ontología para OBDI}
 
-Según \cite{Calvanese2017} los elementos básicos que debe poseer una ontología diseñada con el propósito de permitir la OBDI son los definidos en la ontología \ref{onto:elementosBasicosOntologiaOBDI}.
-
-\begin{equation}
-Concepto \equiv Thing \sqcap \exists mapeo.Literal
-\label{onto:elementosBasicosOntologiaOBDI}
-\end{equation}
 
 
 
