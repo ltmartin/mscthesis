@@ -59,6 +59,17 @@ El análisis semántico de la información almacenada en cada fuente de datos pr
 
 En este paso un Usuario de conceptualización requiere ciertos conceptos sobre un dominio en específico, esta petición se la realiza a un Experto del dominio. El Experto del dominio determina exactamente qué elementos del dominio son los que necesita el Usuario de conceptualización y se lo informa al Ingeniero de conocimiento. El Ingeniero de conocimiento modela conceptualmente los elementos recibidos en términos conocidos por el Usuario de conceptualización y retorna la conceptualización elaborada. Este proceso se ilustra en la figura \ref{fig: conceptsExtraction}.
 
+Para formalizar la conceptualización elaborada se decidió desarrollar la ontología que se describe en \ref{onto:hdrm}.\\
+
+\begin{minipage}{\textwidth}
+$Concept \equiv Thing \sqcap \exists mappedTo.Literal \sqcap =1 mappedTo \sqcap \exists type.Literal \sqcap =1 type \sqcap \forall name.String$ \\
+$Connection \equiv Thing \sqcap \exists endpoint.Literal \sqcap =1 endpoint \sqcap \forall user.String \sqcap \forall password.String $ \\
+$Datasource \equiv Thing \sqcap \exists composedBy.Concept \sqcap \exists has.Connection \sqcap =1 has \sqcap type.Literal \sqcap =1 type$ \\
+\captionof{figure}{T-Box de la ontología desarrollada}
+\label{onto:hdrm}
+\end{minipage}
+
+
 \begin{figure}
 \begin{center}
 	\includegraphics[width=0.8\textwidth]{img/conceptsExtraction.png}
