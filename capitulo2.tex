@@ -59,16 +59,8 @@ El análisis semántico de la información almacenada en cada fuente de datos pr
 
 En este paso un Usuario de conceptualización requiere ciertos conceptos sobre un dominio en específico, esta petición se la realiza a un Experto del dominio. El Experto del dominio determina exactamente qué elementos del dominio son los que necesita el Usuario de conceptualización y se lo informa al Ingeniero de conocimiento. El Ingeniero de conocimiento modela conceptualmente los elementos recibidos en términos conocidos por el Usuario de conceptualización y retorna la conceptualización elaborada. Este proceso se ilustra en la figura \ref{fig: conceptsExtraction}.
 
-Para formalizar la conceptualización elaborada se decidió desarrollar la ontología que se describe en \ref{onto:hdrm}.\\
-
-\begin{minipage}{\textwidth}
-$Concept \equiv Thing \sqcap \exists mappedTo.Literal \sqcap =1 mappedTo \sqcap \exists type.Literal \sqcap =1 type \sqcap \forall name.String$ \\
-$Connection \equiv Thing \sqcap \exists endpoint.Literal \sqcap =1 endpoint \sqcap \forall user.String \sqcap \forall password.String $ \\
-$Datasource \equiv Thing \sqcap \exists composedBy.Concept \sqcap \exists has.Connection \sqcap =1 has \sqcap type.Literal \sqcap =1 type$ \\
-\captionof{figure}{T-Box de la ontología desarrollada}
-\label{onto:hdrm}
-\end{minipage}
-
+\subsection{Proceso de desarrollo de la ontología según la metodología METHONTOLOGY}
+El proceso de desarrollo de una ontología se refiere a cuáles actividades deben realizarse al construir una ontología \citep{Gomez-Perez:2007:OEE:1199560}. La metodología METHONTOLOGY propone la realización de tres categorías de actividades que se ilustran en la figura \ref{fig: methontology}.
 
 \begin{figure}
 \begin{center}
@@ -78,14 +70,72 @@ $Datasource \equiv Thing \sqcap \exists composedBy.Concept \sqcap \exists has.Co
 \label{fig: conceptsExtraction}
 \end{figure}
 
-\section{Instanciación de la ontología para la integración de datos}
+\begin{figure}
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{img/Diagrama_METHONTOLOGY.png}
+\end{center}
+\caption{Proceso de desarrollo de una ontología. Tomado de: \citep{Gomez-Perez:2007:OEE:1199560}}
+\label{fig: methontology}
+\end{figure}
 
-La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada. Según \cite{Calvanese2017} los elementos básicos que debe poseer una ontología diseñada con el propósito de permitir la OBDI son los definidos en la ontología \ref{onto:elementosBasicosOntologiaOBDI}.
+Las actividades de gestión incluyen la planificación, el control y el aseguramiento de la calidad. La actividad de \textit{planificación} identifica las tareas a desarrollar, su prioridad y el tiempo y los recursos para llevarlas a cabo. El resultado de esta actividad se ilustra en la figura \ref{fig: planificacion}. La actividad de \textit{control} garantiza que las tareas planificadas se completen conforme a la manera en que se diseñaron. Finalmente, la actividad de \textit{aseguramiento de la calidad} verifica que la calidad de cada artefacto generado (la ontología, la aplicación informática y la documentación) sea satisfactoria \citep{Gomez-Perez:2007:OEE:1199560}. El cumplimiento de la actividad de \textit{aseguramiento de la calidad} fue certificado por el tribunal que evaluó el ejercicio de culminación de estudios titulado ``AUCTORITAS 2.0: Sistema de apoyo para el Control de Autoridades''.
+
+\begin{figure}
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{img/planificacionTareas.png}
+\end{center}
+\caption{Planificación de las tareas para el desarrollo de la ontología}
+\label{fig: planificacion}
+\end{figure}
+
+Las actividades orientadas al desarrollo de la ontología se agrupan en actividades pre-desarrollo, actividades de desarrollo y actividades post-desarrollo. Durante las actividades pre-desarrollo se realiza un \textit{estudio del entorno} con el fin de conocer las plataformas en las que se utilizará la ontología, las aplicaciones en las que la ontología será integrada, entre otros detalles. Como resultado de esta actividad se determinó que la ontología se utilizaría en una plataforma Java, al ser integrada en la aplicación informática AUCTORITAS versión 2.0. También, durante las actividades pre-desarrollo se lleva a cabo un \textit{análisis de factibilidad} que debe responder a preguntas como: ¿Es posible construir la ontología? ¿Es factible construir la ontología? \citep{Gomez-Perez:2007:OEE:1199560}.
+
+Una vez en el desarrollo, la actividad \textit{especificación} determina el por qué la ontología se está construyendo, para qué se usará y quiénes son los usuarios finales. La \textit{conceptualización} estructura el dominio de conocimiento en forma de modelos significativos al nivel de conocimiento, el resultado de esta actividad se ilustra en la figura \ref{fig: mapaConceptual}. 
+
+La actividad \textit{formalización} transforma el modelo conceptual en un modelo formal o semi-computable. Para formalizar la conceptualización elaborada se decidió desarrollar la ontología que se describe en \ref{onto:hdrm}. Esta ontología cumple con el requisito definido por \cite{Calvanese2017}, el cual especifica que los elementos básicos que debe poseer una ontología diseñada con el propósito de permitir la OBDI son los definidos en la ontología \ref{onto:elementosBasicosOntologiaOBDI}.\\
 
 \begin{equation}
 Concepto \equiv Thing \sqcap \exists mapeo.Literal
 \label{onto:elementosBasicosOntologiaOBDI}
 \end{equation}
+
+La actividad de \textit{implementación} construye modelos computables en un lenguaje de ontologías \citep{Gomez-Perez:2007:OEE:1199560}. Este modelo se construyó utilizando el Lenguaje de Ontologías Web por medio de la herramienta Protégé y se ilustra en la figura \ref{fig: ontologiaProtege}.
+
+\begin{figure}
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{img/mapaConceptual.png}
+\end{center}
+\caption{Conceptualización de los elementos del dominio de conocimiento}
+\label{fig: mapaConceptual}
+\end{figure}
+
+\begin{minipage}{\textwidth}
+$Concept \ \equiv \ Thing \ \sqcap \ \exists  mappedTo.Literal \ \sqcap \ =1 mappedTo \ \sqcap \exists  type.Literal \ \sqcap \ =1 type \ \sqcap \ \forall name.String$ \\
+$Connection \ \equiv \ Thing \ \sqcap \ \exists endpoint.Literal \ \sqcap \ =1 endpoint \ \sqcap \ \forall user.String \ \sqcap \ \forall password.String $ \\
+$Datasource \ \equiv \ Thing \ \sqcap \ \exists composedBy.Concept \ \sqcap \ \exists has.Connection \ \sqcap \ =1 has \ \sqcap \ type.Literal \ \sqcap \ =1 type$ \\
+\captionof{figure}{T-Box de la ontología desarrollada}
+\label{onto:hdrm}
+\end{minipage}
+
+\begin{figure}
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{img/ontologiaProtege.png}
+\end{center}
+\caption{Ontología construida con la herramienta Protégé}
+\label{fig: ontologiaProtege}
+\end{figure}
+
+Durante el post-desarrollo, la actividad de \textit{mantenimiento} actualiza y corrige la ontología de ser necesario. También en esta fase la ontología es reutilizada por otras ontologías o aplicaciones \citep{Gomez-Perez:2007:OEE:1199560}.
+
+Finalmente, las actividades de soporte incluyen una serie de actividades que se realizan al mismo tiempo que las actividades orientadas al desarrollo. Ellas incluyen la adquisición de conocimiento, evaluación, integración, mezcla, alineación, documentación y gestión de configuración. El objetivo de la actividad de \textit{adquisición de conocimiento} es obtener el conocimiento de expertos del dominio a través de algún tipo de procedimiento (semi)automático, lo que se conoce como aprendizaje ontológico. La actividad de \textit{evaluación} realiza un juicio técnico de las ontologías, sus entornos de aplicaciones informáticas asociados, así como de la documentación. Este juicio se realiza con respecto a un marco de referencia durante cada etapa y entre etapas durante el ciclo de vida de la ontología. La actividad de \textit{integración} se requiere cuando se construye la ontología a partir de la reutilización de otras ontologías \citep{Gomez-Perez:2007:OEE:1199560}.
+
+Otra actividad de soporte es la \textit{mezcla}, que consiste en la obtención de una ontología a partir de diferentes ontologías del mismo dominio. La actividad de \textit{alineación} establece diferentes tipos de mapeos entre las ontologías  involucradas. Por otra parte, la actividad de \textit{documentación} detalla, clara y exhaustivamente cada una de las etapas completadas y los productos generados. La \textit{gestión de configuración} almacena todas las versiones de la documentación y del código de la ontología para controlar los cambios.
+
+\section{Instanciación de la ontología para la integración de datos}
+
+La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada. 
+
+
 
 \section{Publicación de la instancia de la ontología creada}
 
