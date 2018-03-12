@@ -82,7 +82,7 @@ Las actividades de gestión incluyen la planificación, el control y el aseguram
 
 \begin{figure}
 \begin{center}
-	\includegraphics[width=0.8\textwidth]{img/planificacionTareas.png}
+	\includegraphics[width=0.8\textwidth]{img/planificacionTareas.PNG}
 \end{center}
 \caption{Planificación de las tareas para el desarrollo de la ontología}
 \label{fig: planificacion}
@@ -133,46 +133,52 @@ Otra actividad de soporte es la \textit{mezcla}, que consiste en la obtención d
 
 \section{Instanciación de la ontología para la integración de datos}
 
-La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada. \\
-
-\begin{minipage}{\textwidth}
-$Datasource(PostgreSQL), \ has(PostgreSQL, postgresConnection), \ type(PostgreSQL,local)$ \\
-$composedBy(PostgreSQL, autorPersonalPostgres).$ \\
-$Concept(autorPersonalPostgres), \ mappedTo(autorPersonalPostgres, consultaSintáctica),$ \\
-$type(autorPersonalPostgres,AUTORPERSONAL), \ name(autorPersonalPostgres, Autor Personal).$\\
-$Connection(postgresConnection), \ endpoint(postgresConnection, jdbc:postgresql://localhost:5432/Autoridades),$ \\
-$user(postgresConnection,postgres), \ password(postgresConnection,admin).$
-$Datasource(VIVO), \ has(VIVO, vivoConnection), \ composedBy(VIVO,institución),$ \\
-$composedBy(VIVO,autorPersonalVivo), \ type(PostgreSQL,http).$ \\
-$Concept(institución), \ mappedTo(institución,consultaSintáctica), \ name(institución, Institución)$ \\
-$type(institución,AUTORCORPORATIVO).$\\
-$Concept(autorPersonalVivo), \ mappedTo(autorPersonalVivo, consultaSintáctica),$ \\
-$type(autorPersonalVivo, AUTORPERSONAL), name(autorPersonalVivo, Autor Personal).$ \\
-$Connection(vivoConnection), \ user(vivoConnection, ''), \ password(vivoConnection, ''),$\\
-$endpoint(vivoConnection, http://10.12.112.148:8080/vivo/api/sparqlQuery?email=vivo_root@mydomain.edu\&password=zas123..).$
-$Datasource(ORCID), \ composedBy(ORCID,autorPersonalOrcid), \ has(ORCID,orcidConnection),$ \\
-$type(ORCID, orcid).$ \\
-$Concept(autorPersonalOrcid), \ mappedTo(autorPersonalOrcid, consultaSintáctica),$\\
-$type(autorPersonalOrcid,AUTORPERSONAL), \ name(autorPersonalOrcid, Autor Personal.)$ \\
-$Connection(orcidConnection), \ user(orcidConnection, ''), \ password(orcidConnection, ''),$
-$endpoint(orcidConnection, https://pub.orcid.org/v1.2/search/orcid-bio/?q=).$\\
-$Datasource(AGROVOC), \ composedBy(AGROVOC, agrovocConcept),$\\
-$has(AGROVOC, virtuosoConnection), \ type(AGROVOC,http).$ \\
-$Concept(agrovocConcept), \ mappedTo(agrovocConcept, consultaSintáctica), $\\
-$type(agrovocConcept, CONTROLEDTERMS), \ name(agrovocConcept, Término Controlado)$\\
-$Connection(virtuosoConnection), \ user(virtuosoConnection, ''), \ password(virtuosoConnection, ''),$
-$endpoint(virtuosoConnection, http://localhost:8890/sparql).$\\
-$Datasource(ACM), \ composedBy(ACM, acmConcept), \ has(ACM, virtuosoConnection),$\\
-$type(ACM,http).$ \\
-$Concept(acmConcept), \ mappedTo(acmConcept,consultaSintáctica),$\\
-$type(acmConcept,CONTROLEDTERMS),  \ name(acmConcept, Término Controlado)$\\
-\end{minipage}
-
-
+La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada. Un ejemplo de instanciación se ilustra en la figura \ref{onto:auctoritasDescription}.
 
 \section{Publicación de la instancia de la ontología creada}
 
 La publicación de la instancia de la ontología creada se refiere a la carga en un almacén de tripletas RDF de la instancia creada.
+
+
+\begin{minipage}{\textwidth}
+$Datasource(PostgreSQL), \ has(PostgreSQL, postgresConnection), \ type(PostgreSQL,local)$ \\
+$composedBy(PostgreSQL, autorPersonalPostgres).$ \\
+$Concept(autorPersonalPostgres), \ mappedTo(autorPersonalPostgres, syntacticQuery),$ \\
+$type(autorPersonalPostgres,AUTORPERSONAL), \ name(autorPersonalPostgres, Autor \ Personal).$\\
+$Connection(postgresConnection), \ user(postgresConnection,postgres),$ \\
+$password(postgresConnection,admin),$ \\
+$endpoint(postgresConnection, jdbc{:}postgresql{:}//localhost{:}5432/Autoridades).$ \\
+$Datasource(VIVO), \ has(VIVO, vivoConnection), \ composedBy(VIVO,institution),$ \\
+$composedBy(VIVO,autorPersonalVivo), \ type(PostgreSQL,http).$ \\
+$Concept(institution), \ mappedTo(institution,syntacticQuery), \ name(institution, Institution)$ \\
+$type(institution,AUTORCORPORATIVO).$\\
+$Concept(autorPersonalVivo), \ mappedTo(autorPersonalVivo, syntacticQuery),$ \\
+$type(autorPersonalVivo, AUTORPERSONAL), name(autorPersonalVivo, Autor \ Personal).$ \\
+$Connection(vivoConnection),$\\
+$endpoint(vivoConnection, $\\
+$http{:}//localhost{:}8080/vivo/api/sparqlQuery?email{=}vivoroot@mydomain.edu\&password{=}zas123..).$\\
+$Datasource(ORCID), \ composedBy(ORCID,autorPersonalOrcid), \ has(ORCID,orcidConnection),$ \\
+$type(ORCID, orcid).$ \\
+$Concept(autorPersonalOrcid), \ mappedTo(autorPersonalOrcid, syntacticQuery),$\\
+$type(autorPersonalOrcid,AUTORPERSONAL), \ name(autorPersonalOrcid, Autor \ Personal.)$ \\
+$Connection(orcidConnection),$\\
+$endpoint(orcidConnection, https{:}//pub{.}orcid{.}org/v1{.}2/search/orcid{-}bio/?q{=}).$\\
+$Datasource(AGROVOC), \ composedBy(AGROVOC, agrovocConcept),$\\
+$has(AGROVOC, virtuosoConnection), \ type(AGROVOC,http).$ \\
+$Concept(agrovocConcept), \ mappedTo(agrovocConcept, syntacticQuery), $\\
+$type(agrovocConcept, CONTROLEDTERMS), \ name(agrovocConcept, Termino \ Controlado)$\\
+$Connection(virtuosoConnection),$
+$endpoint(virtuosoConnection, http{:}//localhost{:}8890/sparql).$\\
+$Datasource(ACM), \ composedBy(ACM, acmConcept), \ has(ACM, virtuosoConnection),$\\
+$type(ACM,http).$ \\
+$Concept(acmConcept), \ mappedTo(acmConcept,syntacticQuery),$\\
+$type(acmConcept,CONTROLEDTERMS),  \ name(acmConcept, Termino \ Controlado)$\\
+\captionof{figure}{A-Box de la ontología desarrollada}
+\label{onto:auctoritasDescription}
+\end{minipage}
+
+
+
 
 \section{Consumo por una aplicación informática de la instancia de la ontología creada}
 
