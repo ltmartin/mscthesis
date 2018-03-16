@@ -13,7 +13,7 @@
  \vspace{-1cm}
 
 \section{Paradigma utilizado en el desarrollo del método}
-La investigación en la disciplina de sistemas de información (SI) se caracteriza por dos paradigmas: las ciencias del comportamiento y las ciencias del diseño \citep{Hevner:2004:DSI:2017212.2017217}. El primer paradigma persigue el desarrollo y verificación de teorías que expliquen o pronostiquen el comportamiento humano u organizacional. El paradigma de las ciencias del diseño tiene como fin la creación de innovaciones que definan ideas prácticas, capacidades tecnológicas y productos a través de los cuales puede lograrse el análisis, diseño, implementación, gestión y uso de sistemas de información de manera efectiva y eficiente \citep{Denning:1997:NSC:253671.253755}. Un SI es un sistema basado en computadoras que ayuda a la gestión y uso de la información en una organización o entre varias organizaciones \citep{GarciaNoguera2009}. Analizando la naturaleza del problema tratado en esta investigación y la relación entre su campo de acción (el mecanismo para integrar datos relativos al Control de Autoridades en la aplicación informática AUCTORITAS) y la disciplina de SI, el desarrollo de la solución se concibió y ejecutó bajo el paradigma de las ciencias del diseño.
+La investigación en la disciplina de sistemas de información (SI) se caracteriza por dos paradigmas: las ciencias del comportamiento y las ciencias del diseño \citep{Hevner:2004:DSI:2017212.2017217}. El primer paradigma persigue el desarrollo y verificación de teorías que expliquen o pronostiquen el comportamiento humano u organizacional. El paradigma de las ciencias del diseño tiene como fin la creación de innovaciones que definan ideas prácticas, capacidades tecnológicas y productos a través de los cuales puede lograrse el análisis, diseño, implementación, gestión y uso de sistemas de información de manera efectiva y eficiente \citep{Denning:1997:NSC:253671.253755}. Un SI es un sistema basado en computadoras que ayuda a la gestión y uso de la información en una organización o entre varias organizaciones \citep{GarciaNoguera2009}. Analizando la naturaleza del problema tratado en esta investigación y la relación entre su campo de acción (el mecanismo para integrar datos relativos al control de autoridades en la aplicación informática AUCTORITAS) y la disciplina de SI, el desarrollo de la solución se concibió y ejecutó bajo el paradigma de las ciencias del diseño.
 
 Las ciencias del diseño crean y evalúan artefactos orientados a mejorar y entender el comportamiento de los sistemas de información, estos artefactos pueden ser constructos, modelos, métodos e instanciaciones \citep{March:1995:DNS:1700865.1700867}. Los constructos pertenecen al vocabulario conceptual de un dominio y son empleados por los modelos para representar una situación del mundo real en términos del diseño de un problema y su espacio de solución \citep{Simon:1996:SA:237774}. La búsqueda dentro de ese espacio de solución es guiada por métodos, los cuales pueden ser algoritmos matemáticos, descripciones textuales del proceso de búsqueda o combinaciones de ambas \citep{Hevner:2004:DSI:2017212.2017217}. Las instanciaciones demuestran la viabilidad de implementar los métodos y modelos, a la vez que facilitan la evaluación concreta del artefacto que representan.
 
@@ -26,7 +26,7 @@ El método propuesto para la Integración de Datos Basada en Ontologías se deno
 
 \textbf{Definición 2.1.2} \textit{Sea una ontología compuesta por una parte conceptual (T-Box) y una parte asercional (A-Box). Se denomina instancia de la ontología a su parte asercional.}
 
-\section{OntoIntegra. Aspectos generales}
+\section{OntoIntegra}
 El aporte teórico fundamental de esta investigación es un método para la integración semántica de datos almacenados en fuentes estructuralmente heterogéneas. La figura \ref{fig: metodoOntoIntegra} ilustra el método propuesto, denominado OntoIntegra. Este método describe la obtención de información conceptualmente integrada a través de cinco pasos fundamentales:
 
 \begin{enumerate}
@@ -45,7 +45,7 @@ El aporte teórico fundamental de esta investigación es un método para la inte
 \label{fig: metodoOntoIntegra}
 \end{figure}
 
-\section{Análisis estructural de cada fuente de datos}
+\subsection{Análisis estructural de cada fuente de datos}
 
 El análisis estructural de cada fuente de datos tiene como objetivo identificar la forma en que se encuentran estructurados los datos a recuperar, formulando la consulta sintáctica adecuada a este proceso. En este paso interviene un Experto del dominio, el cual es una persona que conoce en detalle la estructura de los datos gestionados por la fuente de datos en cuestión. En el caso de las bases de datos relacionales, el ``Lenguaje de Consultas Estructurado'' (``Structured Query Language'' - SQL, por sus siglas de acuerdo al término en idioma inglés) constituye el estándar para la recuperación de datos \citep{Eisenberg:1999:SFK:309844.310075}. Este tipo de bases de datos se ha utilizado durante más de dos décadas \citep{BUCKLES1993660,Hristidis2002670,10.1007/978-981-10-8276-4_22}, por lo que gran parte de los datos almacenados a nivel mundial se encuentran sobre el modelo relacional.
 
@@ -53,13 +53,13 @@ Las bases de datos no relacionales, incluyendo las jerárquicas, orientadas a gr
 
 Cada vez son más los servicios que se publican en la Web usando REST \citep{Pautasso2014}. El estilo de arquitectura REST enfatiza la escalabilidad de las interacciones entre los componentes de las aplicaciones informáticas y promueve la reutilización de los componentes reduciendo su acoplamiento \citep{Pautasso2014}. Resulta posible considerar aplicaciones externas que exponen sus datos a través de REST como fuentes de datos. En este caso, el análisis estructural de la fuente de datos se centraría en la estructura sintáctica que debe poseer la petición a formular para extraer los datos a integrar.
 
-\section{Análisis semántico de la información almacenada en cada fuente de datos}
+\subsection{Análisis semántico de la información almacenada en cada fuente de datos}
 
 El análisis semántico de la información almacenada en cada fuente de datos pretende determinar los conceptos contenidos en las mismas cuyos datos asociados se desean recuperar. En este paso interviene un Experto del dominio y un Ingeniero de conocimiento. El Ingeniero de conocimiento tiene la función de traducir los elementos presentes en una fuente de datos a conceptos comprensibles por un usuario externo.
 
 En este paso un Usuario de conceptualización requiere ciertos conceptos sobre un dominio en específico, esta petición se la realiza a un Experto del dominio. El Experto del dominio determina exactamente qué elementos del dominio son los que necesita el Usuario de conceptualización y se lo informa al Ingeniero de conocimiento. El Ingeniero de conocimiento modela conceptualmente los elementos recibidos en términos conocidos por el Usuario de conceptualización y retorna la conceptualización elaborada. Este proceso se ilustra en la figura \ref{fig: conceptsExtraction}.
 
-\subsection{Proceso de desarrollo de la ontología según la metodología METHONTOLOGY}
+\textbf{Proceso de desarrollo de la ontología según la metodología METHONTOLOGY}
 El proceso de desarrollo de una ontología se refiere a cuáles actividades deben realizarse al construir una ontología \citep{Gomez-Perez:2007:OEE:1199560}. La metodología METHONTOLOGY propone la realización de tres categorías de actividades que se ilustran en la figura \ref{fig: methontology}.
 
 \begin{figure}
@@ -78,7 +78,7 @@ El proceso de desarrollo de una ontología se refiere a cuáles actividades debe
 \label{fig: methontology}
 \end{figure}
 
-Las actividades de gestión incluyen la planificación, el control y el aseguramiento de la calidad. La actividad de \textit{planificación} identifica las tareas a desarrollar, su prioridad, el tiempo y los recursos para llevarlas a cabo. El resultado de esta actividad se ilustra en la figura \ref{fig: planificacion}. La actividad de \textit{control} garantiza que las tareas planificadas se completen conforme a la manera en que se diseñaron. Finalmente, la actividad de \textit{aseguramiento de la calidad} verifica que la calidad de cada artefacto generado (la ontología, la aplicación informática y la documentación) sea satisfactoria \citep{Gomez-Perez:2007:OEE:1199560}. El cumplimiento de la actividad de \textit{aseguramiento de la calidad} fue certificado por el tribunal que evaluó el ejercicio de culminación de estudios titulado ``AUCTORITAS 2.0: Sistema de apoyo para el Control de Autoridades''.
+Las actividades de gestión incluyen la planificación, el control y el aseguramiento de la calidad. La actividad de \textit{planificación} identifica las tareas a desarrollar, su prioridad, el tiempo y los recursos para llevarlas a cabo. El resultado de esta actividad se ilustra en la figura \ref{fig: planificacion}. La actividad de \textit{control} garantiza que las tareas planificadas se completen conforme a la manera en que se diseñaron. Finalmente, la actividad de \textit{aseguramiento de la calidad} verifica que la calidad de cada artefacto generado (la ontología, la aplicación informática y la documentación) sea satisfactoria \citep{Gomez-Perez:2007:OEE:1199560}. El cumplimiento de la actividad de \textit{aseguramiento de la calidad} fue certificado por el tribunal que evaluó el ejercicio de culminación de estudios titulado ``AUCTORITAS 2.0: Sistema de apoyo para el control de autoridades''.
 
 \begin{figure}
 \begin{center}
@@ -131,14 +131,14 @@ Finalmente, las actividades de soporte incluyen una serie de actividades que se 
 
 Otra actividad de soporte es la \textit{mezcla}, que consiste en la obtención de una ontología a partir de diferentes ontologías del mismo dominio. La actividad de \textit{alineación} establece diferentes tipos de mapeos entre las ontologías  involucradas. Por otra parte, la actividad de \textit{documentación} detalla, clara y exhaustivamente cada una de las etapas completadas y los productos generados. La \textit{gestión de configuración} almacena todas las versiones de la documentación y del código de la ontología para controlar los cambios.
 
-\section{Instanciación de la ontología para la integración de datos}
+\subsection{Instanciación de la ontología para la integración de datos}
 
 Se ha demostrado que las ontologías de dominio pueden apoyar la extracción de conocimiento, lo que significa que el problema de extracción de información puede ser generalizado al problema de encontrar e insertar información que concuerde con una ontología en la base de conocimiento de un sistema, este proceso se conoce como ``instanciación de la ontología'' o ``poblado de la ontología'' \citep{JANNACH2009136}. Entonces la ontología instanciada puede servir como base para el desarrollo de servicios de conocimiento en la Web Semántica \citep{1179189}.
 
 La instanciación de una ontología es un proceso costoso y que consume tiempo \citep{10.1007/978-0-387-87685-6_30}, por esta razón existen enfoques automáticos \citep{1179189,JANNACH2009136} y semi-automáticos \citep{10.1007/978-0-387-87685-6_30}. La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada. Debido al alto nivel de detalle que implica instanciar una ontología para OBDI se escogió realizar este proceso manualmente. Un ejemplo de instanciación se ilustra en la figura \ref{onto:auctoritasDescription}, en la que se utilizó la variable syntacticQuery con el objetivo de facilitar su comprensión. Esta variable se refiere a una consulta sintáctica formulada en un lenguaje de consulta (por ejemplo: SQL, SPARQL, una petición REST, entre otros).
 
 
-\section{Publicación de la instancia de la ontología creada}
+\subsection{Publicación de la instancia de la ontología creada}
 
 La publicación de la instancia de la ontología creada se refiere a la carga en un almacén de tripletas RDF de la instancia creada.
 
@@ -183,7 +183,7 @@ $type(acmConcept,CONTROLEDTERMS),  \ name(acmConcept, Termino \ Controlado)$\\
 
 
 
-\section{Consumo por una aplicación informática de la instancia de la ontología creada}
+\subsection{Consumo por una aplicación informática de la instancia de la ontología creada}
 
 El consumo por una aplicación informática de la instancia de la ontología creada procura, a partir de la definición terminológica de la ontología, obtener su instanciación y utilizarla para recuperar los datos requeridos.
 
