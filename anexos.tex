@@ -5,7 +5,7 @@
 \pagestyle{fancy}
 \lhead{}
 \chead{}
-\rhead{Primer apéndice}
+\rhead{}
 \lfoot{}
 \cfoot{}
 \rfoot{\thepage}
@@ -16,161 +16,55 @@
 
 \textbf{Federación Internacional de Asociaciones de Bibliotecarios y Bibliotecas:} Organización mundial creada para proporcionar a los bibliotecarios un foro para intercambiar ideas, promoviendo la cooperación, la investigación y el desarrollo internacionales en todos los campos relacionados con la actividad bibliotecaria y la bibliotecología.
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%A PARTIR DE AQUÍ EL ANEXO 2
 
-\chapter{\large Segundo apéndice}
+\chapter{\large A-Box de la ontología desarrollada}
 
 \pagestyle{fancy}
 \lhead{}
 \chead{}
-\rhead{Segundo apéndice}
+\rhead{}
 \lfoot{}
 \cfoot{}
 \rfoot{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \vspace{-1cm}
 
-\section{\large Definición de los casos de uso}
 
-\subsection{\large Definición de actores}
-
-
-  Representación de los casos de uso, indicando por qué lo son.
-{%
-  \newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
-  \begin{longtable}{|l|l|}
-  \hline
-  \textbf{Actores} & \textbf{Justificación}\\
-  \hline
-  \mc{1}{|c|}{(1)} & \mc{1}{|c|}{(2)}\\
-  \hline
-  \end{longtable}
-}%
-  {\bf Leyenda:}
-  \begin{enumerate}
-   \item Nombre del actor.
-   \item Breve descripción del actor.
-  \end{enumerate}
-
-  Listado de casos de uso.
-  \begin{longtable}{|l|l|}
-    \hline
-    (1) & (2)\\
-    \hline
-    \textbf{Actor} & (3)\\
-    \hline
-    \textbf{Descripción} & (4)\\
-    \hline
-    \textbf{Referencia} & (5)\\
-    \hline
-  \end{longtable}
-
-  {\bf Leyenda: }
-\begin{enumerate}
- \item Código que se le de al caso de uso, nombre corto, por ejemplo CU-1.
- \item Nombre del caso de uso.
- \item Listado de actores que participa en el caso de uso.
- \item Descripción del caso de uso, esta descripción no tiene limites, por lo que se puede explicar bien todo 
-lo que sucede, de manera general, sin llegar a detalles técnicos, es solo una descripción.
- \item Referencia a requerimientos funcionales o no funcionales, así como otros casos de uso, con los que esté 
-relacionado el caso de uso.
-\end{enumerate}
-
-\subsection{Diagrama de casos de uso} 
-
-Diagrama de casos de uso del sistema a automatizar. Se incluyen las relaciones de include, extend y 
-generalización/especialización entre los casos de uso, y de generalización/especialización entre los actores, 
-así como los casos de uso asociados con la seguridad. Estructurar los casos de uso en paquetes y poner el 
-diagrama con las dependencias entre ellos.
-
-{%
-\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
-\definecolor{tcA}{rgb}{0.764706,0.764706,0.764706}
-\begin{longtable}{|c|c|}
-  \hline
-% use packages: color,colortbl
-  \mc{2}{|>{\columncolor{tcA}}c|}{\textbf{DIAGRAMA DE CASOS DE USO}}\\
-  \hline
-  \mc{2}{|c|}{(1)}\\
-  \hline
-\end{longtable}
-}%
-
-{\bf Leyenda:}
-\begin{enumerate}
- \item Representación gráfica del diagrama.
-\end{enumerate}
-
-\subsection{Casos de uso por ciclo} 
-
-Definir una tabla como la siguiente para cada uno de los ciclos de desarrollo.
-\definecolor{tcA}{rgb}{0.764706,0.764706,0.764706}
-  \begin{longtable}{|l|l|l|l|}
-    \hline
-    % use packages: color,colortbl
-    \rowcolor{tcA}
-    \textbf{Cód} & \textbf{Nombre de caso de uso} & \textbf{Paquete} & \textbf{Justificación de la selección}\\
-    \hline
-   &  &  & \\
-  \hline
-\end{longtable}
-
-\subsection{Casos de uso expandidos}
-{%
-\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
-\definecolor{tcA}{rgb}{0.764706,0.764706,0.764706}
-\begin{longtable}{|l|l|}
-  \hline
-  % use packages: color,colortbl
-  \mc{2}{|>{\columncolor{tcA}}l|}{\textbf{Caso de uso}}\\
-  \hline
-  (1) & (2)\\
-  \hline
-  \textbf{Propósito} & (3)\\
-  \hline
-  \mc{2}{|l|}{\textbf{Actores}}\\
-  \hline
-  \mc{2}{|l|}{\textbf{Resumen: (4)}}\\
-  \hline
-  \textbf{Referencias} & (5)\\
-  \hline
-  \textbf{Acción del actor} & \textbf{Respuesta del sistema}\\
-  \hline
-  (6) & (7)\\
-  \hline
-  \mc{2}{|l|}{\textbf{Flujo alternativo (8)}}\\
-  \hline
-  \textbf{Acción del actor} & \textbf{Respuesta del sistema}\\
-  \hline
-  (9) & (10)\\
-  \hline
-  \mc{2}{|l|}{\textbf{Puntos de extensión}}\\
-  \hline
-  \mc{2}{|l|}{(11)}\\
-  \hline
-\end{longtable}
-}%
-
-{\bf Leyenda:}
-\begin{enumerate}
- \item Código del caso de uso
- \item Nombre del caso de uso
- \item Objetivo del caso de uso.
- \item Descripción del caso de uso.
- \item Requerimientos funcionales o casos de uso con los que se relacione el caso de uso, ya sea porque es un requerimiento que le da origen, o por ser un caso de uso que se incluye o extiende.
- \item Listado de acciones que realiza el actor.
- \item Listado de respuestas del sistema ante las acciones del actor. {En esta parte se especifica el flujo básico o curso normal de las acciones, de existir condicionantes o posibles caminos se especifican en los Flujos alternativos.}
- \item Nombre o número del flujo alternativo
- \item Listado de acciones que realiza el actor.
- \item Listado de respuestas del sistema ante las acciones del actor.
- \item Listado de extensiones de los casos de uso. Especificar la línea del curso de acciones en que se encuentra esta extensión. Por ejemplo:
-Línea 5 se autentica el usuario. Ver CU Autenticar usuario.
-\end{enumerate}
-
-
- {\bf Nota:} Documentos que complementan el cuerpo del trabajo, pero que no son indispensables para 
-entenderlo. Todos deben ser referenciados en el cuerpo del documento.
-
+\begin{minipage}{\textwidth}
+$Datasource(PostgreSQL), \ has(PostgreSQL, postgresConnection), \ type(PostgreSQL,local)$ \\
+$composedBy(PostgreSQL, autorPersonalPostgres).$ \\
+$Concept(autorPersonalPostgres), \ mappedTo(autorPersonalPostgres, syntacticQuery),$ \\
+$type(autorPersonalPostgres,AUTORPERSONAL), \ name(autorPersonalPostgres, Autor \ Personal).$\\
+$Connection(postgresConnection), \ user(postgresConnection,postgres),$ \\
+$password(postgresConnection,admin),$ \\
+$endpoint(postgresConnection, jdbc{:}postgresql{:}//localhost{:}5432/Autoridades).$ \\
+$Datasource(VIVO), \ has(VIVO, vivoConnection), \ composedBy(VIVO,institution),$ \\
+$composedBy(VIVO,autorPersonalVivo), \ type(PostgreSQL,http).$ \\
+$Concept(institution), \ mappedTo(institution,syntacticQuery), \ name(institution, Institution)$ \\
+$type(institution,AUTORCORPORATIVO).$\\
+$Concept(autorPersonalVivo), \ mappedTo(autorPersonalVivo, syntacticQuery),$ \\
+$type(autorPersonalVivo, AUTORPERSONAL), name(autorPersonalVivo, Autor \ Personal).$ \\
+$Connection(vivoConnection),$\\
+$endpoint(vivoConnection, $\\
+$http{:}//localhost{:}8080/vivo/api/sparqlQuery?email{=}vivoroot@mydomain.edu\&password{=}zas123..).$\\
+$Datasource(ORCID), \ composedBy(ORCID,autorPersonalOrcid), \ has(ORCID,orcidConnection),$ \\
+$type(ORCID, orcid).$ \\
+$Concept(autorPersonalOrcid), \ mappedTo(autorPersonalOrcid, syntacticQuery),$\\
+$type(autorPersonalOrcid,AUTORPERSONAL), \ name(autorPersonalOrcid, Autor \ Personal.)$ \\
+$Connection(orcidConnection),$\\
+$endpoint(orcidConnection, https{:}//pub{.}orcid{.}org/v1{.}2/search/orcid{-}bio/?q{=}).$\\
+$Datasource(AGROVOC), \ composedBy(AGROVOC, agrovocConcept),$\\
+$has(AGROVOC, virtuosoConnection), \ type(AGROVOC,http).$ \\
+$Concept(agrovocConcept), \ mappedTo(agrovocConcept, syntacticQuery), $\\
+$type(agrovocConcept, CONTROLEDTERMS), \ name(agrovocConcept, Termino \ Controlado)$\\
+$Connection(virtuosoConnection),$
+$endpoint(virtuosoConnection, http{:}//localhost{:}8890/sparql).$\\
+$Datasource(ACM), \ composedBy(ACM, acmConcept), \ has(ACM, virtuosoConnection),$\\
+$type(ACM,http).$ \\
+$Concept(acmConcept), \ mappedTo(acmConcept,syntacticQuery),$\\
+$type(acmConcept,CONTROLEDTERMS),  \ name(acmConcept, Termino \ Controlado)$\\
+%\captionof{figure}{A-Box de la ontología desarrollada}
+%\label{onto:auctoritasDescription}
+\end{minipage}
 

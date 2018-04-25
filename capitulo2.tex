@@ -60,6 +60,7 @@ El análisis semántico de la información almacenada en cada fuente de datos pr
 En este paso un Usuario de conceptualización requiere ciertos conceptos sobre un dominio en específico, esta petición se la realiza a un Experto del dominio. El Experto del dominio determina exactamente qué elementos del dominio son los que necesita el Usuario de conceptualización y se lo informa al Ingeniero de conocimiento. El Ingeniero de conocimiento modela conceptualmente los elementos recibidos en términos conocidos por el Usuario de conceptualización y retorna la conceptualización elaborada. Este proceso se ilustra en la figura \ref{fig: conceptsExtraction}.
 
 \textbf{Proceso de desarrollo de la ontología según la metodología METHONTOLOGY}
+
 El proceso de desarrollo de una ontología se refiere a cuáles actividades deben realizarse al construir una ontología \citep{Gomez-Perez:2007:OEE:1199560}. La metodología METHONTOLOGY propone la realización de tres categorías de actividades que se ilustran en la figura \ref{fig: methontology}.
 
 \begin{figure}
@@ -135,53 +136,13 @@ Otra actividad de soporte es la \textit{mezcla}, que consiste en la obtención d
 
 Se ha demostrado que las ontologías de dominio pueden apoyar la extracción de conocimiento, lo que significa que el problema de extracción de información puede ser generalizado al problema de encontrar e insertar información que concuerde con una ontología en la base de conocimiento de un sistema, este proceso se conoce como ``instanciación de la ontología'' o ``poblado de la ontología'' \citep{JANNACH2009136}. Entonces la ontología instanciada puede servir como base para el desarrollo de servicios de conocimiento en la Web Semántica \citep{1179189}.
 
-La instanciación de una ontología es un proceso costoso y que consume tiempo \citep{10.1007/978-0-387-87685-6_30}, por esta razón existen enfoques automáticos \citep{1179189,JANNACH2009136} y semi-automáticos \citep{10.1007/978-0-387-87685-6_30}. La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada. Debido al alto nivel de detalle que implica instanciar una ontología para OBDI se escogió realizar este proceso manualmente. Un ejemplo de instanciación se ilustra en la figura \ref{onto:auctoritasDescription}, en la que se utilizó la variable syntacticQuery con el objetivo de facilitar su comprensión. Esta variable se refiere a una consulta sintáctica formulada en un lenguaje de consulta (por ejemplo: SQL, SPARQL, una petición REST, entre otros).
-
+La instanciación de una ontología es un proceso costoso y que consume tiempo \citep{10.1007/978-0-387-87685-6_30}, por esta razón existen enfoques automáticos \citep{1179189,JANNACH2009136} y semi-automáticos \citep{10.1007/978-0-387-87685-6_30}. La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada. Debido al alto nivel de detalle que implica instanciar una ontología para OBDI se escogió realizar este proceso manualmente. Un ejemplo de instanciación se ilustra en el Anexo B, en el que se utilizó la variable syntacticQuery con el objetivo de facilitar su comprensión. Esta variable se refiere a una consulta sintáctica formulada en un lenguaje de consulta (por ejemplo: SQL, SPARQL, una petición REST, entre otros).
 
 \subsection{Publicación de la instancia de la ontología creada}
 
-La publicación de la instancia de la ontología creada se refiere a la carga en un almacén de tripletas RDF de la instancia creada.
+Uno de los principales retos que se enfrentan en la Web Semántica es que las ontologías típicamente se publican como ficheros sin soporte para utilizarlos en aplicaciones \citep{viljanen2008publishing}. Los almacenes de tripletas RDF constituyen un tipo de bases de datos basadas en grafos, lo que les permite almacenar datos en forma de redes de objetos vinculados entre sí. Las bases de datos de este tipo son  capaces de gestionar consultas semánticas y utilizar inferencias para descubrir nueva información implícita en los datos almacenados y sus relaciones.
 
-
-\begin{minipage}{\textwidth}
-$Datasource(PostgreSQL), \ has(PostgreSQL, postgresConnection), \ type(PostgreSQL,local)$ \\
-$composedBy(PostgreSQL, autorPersonalPostgres).$ \\
-$Concept(autorPersonalPostgres), \ mappedTo(autorPersonalPostgres, syntacticQuery),$ \\
-$type(autorPersonalPostgres,AUTORPERSONAL), \ name(autorPersonalPostgres, Autor \ Personal).$\\
-$Connection(postgresConnection), \ user(postgresConnection,postgres),$ \\
-$password(postgresConnection,admin),$ \\
-$endpoint(postgresConnection, jdbc{:}postgresql{:}//localhost{:}5432/Autoridades).$ \\
-$Datasource(VIVO), \ has(VIVO, vivoConnection), \ composedBy(VIVO,institution),$ \\
-$composedBy(VIVO,autorPersonalVivo), \ type(PostgreSQL,http).$ \\
-$Concept(institution), \ mappedTo(institution,syntacticQuery), \ name(institution, Institution)$ \\
-$type(institution,AUTORCORPORATIVO).$\\
-$Concept(autorPersonalVivo), \ mappedTo(autorPersonalVivo, syntacticQuery),$ \\
-$type(autorPersonalVivo, AUTORPERSONAL), name(autorPersonalVivo, Autor \ Personal).$ \\
-$Connection(vivoConnection),$\\
-$endpoint(vivoConnection, $\\
-$http{:}//localhost{:}8080/vivo/api/sparqlQuery?email{=}vivoroot@mydomain.edu\&password{=}zas123..).$\\
-$Datasource(ORCID), \ composedBy(ORCID,autorPersonalOrcid), \ has(ORCID,orcidConnection),$ \\
-$type(ORCID, orcid).$ \\
-$Concept(autorPersonalOrcid), \ mappedTo(autorPersonalOrcid, syntacticQuery),$\\
-$type(autorPersonalOrcid,AUTORPERSONAL), \ name(autorPersonalOrcid, Autor \ Personal.)$ \\
-$Connection(orcidConnection),$\\
-$endpoint(orcidConnection, https{:}//pub{.}orcid{.}org/v1{.}2/search/orcid{-}bio/?q{=}).$\\
-$Datasource(AGROVOC), \ composedBy(AGROVOC, agrovocConcept),$\\
-$has(AGROVOC, virtuosoConnection), \ type(AGROVOC,http).$ \\
-$Concept(agrovocConcept), \ mappedTo(agrovocConcept, syntacticQuery), $\\
-$type(agrovocConcept, CONTROLEDTERMS), \ name(agrovocConcept, Termino \ Controlado)$\\
-$Connection(virtuosoConnection),$
-$endpoint(virtuosoConnection, http{:}//localhost{:}8890/sparql).$\\
-$Datasource(ACM), \ composedBy(ACM, acmConcept), \ has(ACM, virtuosoConnection),$\\
-$type(ACM,http).$ \\
-$Concept(acmConcept), \ mappedTo(acmConcept,syntacticQuery),$\\
-$type(acmConcept,CONTROLEDTERMS),  \ name(acmConcept, Termino \ Controlado)$\\
-\captionof{figure}{A-Box de la ontología desarrollada}
-\label{onto:auctoritasDescription}
-\end{minipage}
-
-
-
+La publicación de la instancia de la ontología creada se refiere a su carga en un almacén de tripletas RDF. Este paso permite compartir en línea la instancia, haciéndola reutilizable por otras aplicaciones que requieran acceder a las fuentes de datos descritas. Los elementos descritos en una ontología publicada en un almacén de tripletas RDF son accesibles mediante consultas SPARQL, beneficiándose de las características de este tipo de bases de datos y de las potencialidades del lenguaje de consultas.
 
 \subsection{Consumo por una aplicación informática de la instancia de la ontología creada}
 
