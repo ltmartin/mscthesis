@@ -16,55 +16,7 @@
 
 \textbf{Federación Internacional de Asociaciones de Bibliotecarios y Bibliotecas:} Organización mundial creada para proporcionar a los bibliotecarios un foro para intercambiar ideas, promoviendo la cooperación, la investigación y el desarrollo internacionales en todos los campos relacionados con la actividad bibliotecaria y la bibliotecología.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%A PARTIR DE AQUÍ EL ANEXO 2
-
-\chapter{\large A-Box de la ontología desarrollada}
-
-\pagestyle{fancy}
-\lhead{}
-\chead{}
-\rhead{}
-\lfoot{}
-\cfoot{}
-\rfoot{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\vspace{-1cm}
 
 
-\begin{minipage}{\textwidth}
-$Datasource(PostgreSQL), \ has(PostgreSQL, postgresConnection), \ type(PostgreSQL,local)$ \\
-$composedBy(PostgreSQL, autorPersonalPostgres).$ \\
-$Concept(autorPersonalPostgres), \ mappedTo(autorPersonalPostgres, syntacticQuery),$ \\
-$type(autorPersonalPostgres,AUTORPERSONAL), \ name(autorPersonalPostgres, Autor \ Personal).$\\
-$Connection(postgresConnection), \ user(postgresConnection,postgres),$ \\
-$password(postgresConnection,admin),$ \\
-$endpoint(postgresConnection, jdbc{:}postgresql{:}//localhost{:}5432/Autoridades).$ \\
-$Datasource(VIVO), \ has(VIVO, vivoConnection), \ composedBy(VIVO,institution),$ \\
-$composedBy(VIVO,autorPersonalVivo), \ type(PostgreSQL,http).$ \\
-$Concept(institution), \ mappedTo(institution,syntacticQuery), \ name(institution, Institution)$ \\
-$type(institution,AUTORCORPORATIVO).$\\
-$Concept(autorPersonalVivo), \ mappedTo(autorPersonalVivo, syntacticQuery),$ \\
-$type(autorPersonalVivo, AUTORPERSONAL), name(autorPersonalVivo, Autor \ Personal).$ \\
-$Connection(vivoConnection),$\\
-$endpoint(vivoConnection, $\\
-$http{:}//localhost{:}8080/vivo/api/sparqlQuery?email{=}vivoroot@mydomain.edu\&password{=}zas123..).$\\
-$Datasource(ORCID), \ composedBy(ORCID,autorPersonalOrcid), \ has(ORCID,orcidConnection),$ \\
-$type(ORCID, orcid).$ \\
-$Concept(autorPersonalOrcid), \ mappedTo(autorPersonalOrcid, syntacticQuery),$\\
-$type(autorPersonalOrcid,AUTORPERSONAL), \ name(autorPersonalOrcid, Autor \ Personal.)$ \\
-$Connection(orcidConnection),$\\
-$endpoint(orcidConnection, https{:}//pub{.}orcid{.}org/v1{.}2/search/orcid{-}bio/?q{=}).$\\
-$Datasource(AGROVOC), \ composedBy(AGROVOC, agrovocConcept),$\\
-$has(AGROVOC, virtuosoConnection), \ type(AGROVOC,http).$ \\
-$Concept(agrovocConcept), \ mappedTo(agrovocConcept, syntacticQuery), $\\
-$type(agrovocConcept, CONTROLEDTERMS), \ name(agrovocConcept, Termino \ Controlado)$\\
-$Connection(virtuosoConnection),$
-$endpoint(virtuosoConnection, http{:}//localhost{:}8890/sparql).$\\
-$Datasource(ACM), \ composedBy(ACM, acmConcept), \ has(ACM, virtuosoConnection),$\\
-$type(ACM,http).$ \\
-$Concept(acmConcept), \ mappedTo(acmConcept,syntacticQuery),$\\
-$type(acmConcept,CONTROLEDTERMS),  \ name(acmConcept, Termino \ Controlado)$\\
-%\captionof{figure}{A-Box de la ontología desarrollada}
-%\label{onto:auctoritasDescription}
-\end{minipage}
+
 

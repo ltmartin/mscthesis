@@ -1,4 +1,4 @@
-\chapter{\large Método para la Integración de Datos Basada en Ontologías}
+\chapter{\large Método para la integración de datos basada en ontologías}
 
 
 \pagestyle{fancy}
@@ -13,11 +13,11 @@
  \vspace{-1cm}
 
 \section{Paradigma utilizado en el desarrollo del método}
-La investigación en la disciplina de sistemas de información (SI) se caracteriza por dos paradigmas: las ciencias del comportamiento y las ciencias del diseño \citep{Hevner:2004:DSI:2017212.2017217}. El primer paradigma persigue el desarrollo y verificación de teorías que expliquen o pronostiquen el comportamiento humano u organizacional. El paradigma de las ciencias del diseño tiene como fin la creación de innovaciones que definan ideas prácticas, capacidades tecnológicas y productos a través de los cuales puede lograrse el análisis, diseño, implementación, gestión y uso de sistemas de información de manera efectiva y eficiente \citep{Denning:1997:NSC:253671.253755}. Un SI es un sistema basado en computadoras que ayuda a la gestión y uso de la información en una organización o entre varias organizaciones \citep{GarciaNoguera2009}. Analizando la naturaleza del problema tratado en esta investigación y la relación entre su campo de acción (el mecanismo para integrar datos relativos al control de autoridades en la aplicación informática AUCTORITAS) y la disciplina de SI, el desarrollo de la solución se concibió y ejecutó bajo el paradigma de las ciencias del diseño.
+La investigación en la disciplina de sistemas de información (SI) se caracteriza por dos paradigmas: las ciencias del comportamiento y las ciencias del diseño \citep{Hevner:2004:DSI:2017212.2017217}. El primer paradigma persigue el desarrollo y verificación de teorías que expliquen o pronostiquen el comportamiento humano u organizacional. El paradigma de las ciencias del diseño tiene como fin la creación de innovaciones que definan ideas prácticas, capacidades tecnológicas y productos a través de los cuales puede lograrse el análisis, diseño, implementación, gestión y uso de sistemas de información de manera efectiva y eficiente \citep{Denning:1997:NSC:253671.253755}. Un SI es un sistema basado en computadoras que ayuda a la gestión y uso de la información en una organización o entre varias organizaciones \citep{GarciaNoguera2009}. Analizando la naturaleza del problema tratado en esta investigación y la relación entre su campo de acción (el método para integrar datos relativos al control de autoridades en el proyecto ELINF) y la disciplina de SI, el desarrollo de la solución se concibió y ejecutó bajo el paradigma de las ciencias del diseño.
 
 Las ciencias del diseño crean y evalúan artefactos orientados a mejorar y entender el comportamiento de los sistemas de información, estos artefactos pueden ser constructos, modelos, métodos e instanciaciones \citep{March:1995:DNS:1700865.1700867}. Los constructos pertenecen al vocabulario conceptual de un dominio y son empleados por los modelos para representar una situación del mundo real en términos del diseño de un problema y su espacio de solución \citep{Simon:1996:SA:237774}. La búsqueda dentro de ese espacio de solución es guiada por métodos, los cuales pueden ser algoritmos matemáticos, descripciones textuales del proceso de búsqueda o combinaciones de ambas \citep{Hevner:2004:DSI:2017212.2017217}. Las instanciaciones demuestran la viabilidad de implementar los métodos y modelos, a la vez que facilitan la evaluación concreta del artefacto que representan.
 
-La presente investigación fue desarrollada según el proceso definido por \cite{Peffers2006} para las investigaciones en ciencias del diseño. Este proceso propone seis actividades secuenciales: identificación del problema y motivación, objetivos de la solución, diseño y desarrollo, demostración, evaluación y comunicación. Los resultados de la primera y segunda actividad fueron expresados en la introducción de este documento. El diseño y desarrollo incluye determinar las funcionalidades deseadas del artefacto y su arquitectura para luego crear el artefacto en cuestión. Los elementos esenciales que debe poseer una aplicación informática para el OBDA/OBDI se sintetizan en el subepígrafe \ref{Acceso e Integración de Datos Basado en Ontologías}. Los artefactos
+La presente investigación fue desarrollada según el proceso definido por \cite{Peffers2006} para las investigaciones en ciencias del diseño. Este proceso propone seis actividades secuenciales: identificación del problema y motivación, objetivos de la solución, diseño y desarrollo, demostración, evaluación y comunicación. Los resultados de la primera y segunda actividad fueron expresados en la introducción de este documento. El diseño y desarrollo incluye determinar las funcionalidades deseadas del artefacto y su arquitectura para luego crear el artefacto en cuestión. Los elementos esenciales que debe poseer una aplicación informática para el OBDA/OBDI fueron sintetizados en el subepígrafe \ref{Acceso e Integración de Datos Basado en Ontologías}. Los artefactos
 creados serán descritos en los epígrafes siguientes, mientras que la demostración de su eficacia en la solución del problema, así como la observación y medición de su desempeño relativos a las actividades cuatro y cinco del proceso serán expuestas en el Capítulo \ref{Capítulo 3}. Como evidencia de la comunicación a otros investigadores del problema abordado en la investigación y su relevancia, el artefacto creado, su utilidad y su efectividad, se encuentran artículos publicados en revistas y trabajos presentados en eventos por el autor de esta investigación.
 
 El método propuesto para la Integración de Datos Basada en Ontologías se denomina OntoIntegra. Este método describe el proceso para la integración de los datos almacenados en fuentes de datos estructuralmente heterogéneas en una respuesta conceptualmente homogénea, a partir de la instanciación de una ontología creada para la OBDI. El método se basa en los constructos: consulta sintáctica y instancia de una ontología.
@@ -51,7 +51,7 @@ El análisis estructural de cada fuente de datos tiene como objetivo identificar
 
 Las bases de datos no relacionales, incluyendo las jerárquicas, orientadas a grafos y orientadas a objetos existen desde finales de la década de 1960 \citep{Leavitt2010}. Con el surgimiento y desarrollo de la Web 3.0, las bases de datos orientadas a grafos que soportan el modelo de datos RDF han ganado popularidad \citep{Zaki2017,BRISABOA2017106}. El lenguaje ``Protocolo SPARQL y Lenguaje de Consulta RDF'' (``SPARQL Protocol and RDF Query Language'' - SPARQL, por sus siglas de acuerdo al término en idioma inglés) es la recomendación del ``Consorcio de la World Wide Web'' (``World Wide Web Consortium'' - W3C, por sus siglas de acuerdo al término en idioma inglés) para la consulta sobre grafos RDF \citep{W3CSPARQLWorkingGroup2013}.
 
-Cada vez son más los servicios que se publican en la Web usando REST \citep{Pautasso2014}. El estilo de arquitectura REST enfatiza la escalabilidad de las interacciones entre los componentes de las aplicaciones informáticas y promueve la reutilización de los componentes reduciendo su acoplamiento \citep{Pautasso2014}. Resulta posible considerar aplicaciones externas que exponen sus datos a través de REST como fuentes de datos. En este caso, el análisis estructural de la fuente de datos se centraría en la estructura sintáctica que debe poseer la petición a formular para extraer los datos a integrar.
+Cada vez son más los servicios que se publican en la Web usando la ``Transferencia de estado representacional'' (``Representational state transfer'' - REST, por sus siglas de acuerdo al término en idioma inglés) \citep{Pautasso2014}. El estilo de arquitectura REST enfatiza la escalabilidad de las interacciones entre los componentes de las aplicaciones informáticas y promueve la reutilización de los componentes reduciendo su acoplamiento \citep{Pautasso2014}. Resulta posible considerar aplicaciones externas que exponen sus datos a través de REST como fuentes de datos. En este caso, el análisis estructural de la fuente de datos se centraría en la estructura sintáctica que debe poseer la petición a formular para extraer los datos a integrar.
 
 \subsection{Análisis semántico de la información almacenada en cada fuente de datos}
 
@@ -59,13 +59,15 @@ El análisis semántico de la información almacenada en cada fuente de datos pr
 
 En este paso un Usuario de conceptualización requiere ciertos conceptos sobre un dominio en específico, esta petición se la realiza a un Experto del dominio. El Experto del dominio determina exactamente qué elementos del dominio son los que necesita el Usuario de conceptualización y se lo informa al Ingeniero de conocimiento. El Ingeniero de conocimiento modela conceptualmente los elementos recibidos en términos conocidos por el Usuario de conceptualización y retorna la conceptualización elaborada. Este proceso se ilustra en la figura \ref{fig: conceptsExtraction}.
 
+
 \textbf{Proceso de desarrollo de la ontología según la metodología METHONTOLOGY}
+
 
 El proceso de desarrollo de una ontología se refiere a cuáles actividades deben realizarse al construir una ontología \citep{Gomez-Perez:2007:OEE:1199560}. La metodología METHONTOLOGY propone la realización de tres categorías de actividades que se ilustran en la figura \ref{fig: methontology}.
 
 \begin{figure}
 \begin{center}
-	\includegraphics[width=0.8\textwidth]{img/conceptsExtraction.png}
+	\includegraphics[width=1\textwidth]{img/conceptsExtraction.png}
 \end{center}
 \caption{Secuencia realizada en el paso Análisis semántico de la información almacenada en cada fuente de datos}
 \label{fig: conceptsExtraction}
@@ -136,7 +138,72 @@ Otra actividad de soporte es la \textit{mezcla}, que consiste en la obtención d
 
 Se ha demostrado que las ontologías de dominio pueden apoyar la extracción de conocimiento, lo que significa que el problema de extracción de información puede ser generalizado al problema de encontrar e insertar información que concuerde con una ontología en la base de conocimiento de un sistema, este proceso se conoce como ``instanciación de la ontología'' o ``poblado de la ontología'' \citep{JANNACH2009136}. Entonces la ontología instanciada puede servir como base para el desarrollo de servicios de conocimiento en la Web Semántica \citep{1179189}.
 
-La instanciación de una ontología es un proceso costoso y que consume tiempo \citep{10.1007/978-0-387-87685-6_30}, por esta razón existen enfoques automáticos \citep{1179189,JANNACH2009136} y semi-automáticos \citep{10.1007/978-0-387-87685-6_30}. La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada. Debido al alto nivel de detalle que implica instanciar una ontología para OBDI se escogió realizar este proceso manualmente. Un ejemplo de instanciación se ilustra en el Anexo B, en el que se utilizó la variable syntacticQuery con el objetivo de facilitar su comprensión. Esta variable se refiere a una consulta sintáctica formulada en un lenguaje de consulta (por ejemplo: SQL, SPARQL, una petición REST, entre otros).
+La instanciación de una ontología es un proceso costoso y que consume tiempo \citep{10.1007/978-0-387-87685-6_30}, por esta razón existen enfoques automáticos \citep{1179189,JANNACH2009136} y semi-automáticos \citep{10.1007/978-0-387-87685-6_30}. La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada. Debido al alto nivel de detalle que implica instanciar una ontología para OBDI se escogió realizar este proceso manualmente. 
+
+Para la instanciación manual de una ontología es posible apoyarse en un editor de ontologías. La tabla \ref{tab: editores} sintetiza características de varios editores de ontologías.
+
+\begin{table}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Herramienta & Versión & Propietario / & Características / & Lenguaje & Libre \\ 
+ &  & Desarrollador & Limitaciones & primario & Libre \\
+\hline 
+Adaptiva & - & Universidad Sheffield & Adquisición de & Java & Sí \\ 
+ &  &  & conocimiento &  &  \\
+\hline 
+Semantic-works 2012 & 2012 & Altova & Editor OWL + RDFS & Java & No \\ 
+\hline 
+Conzilla & 2.2 & Grupo de investigaciones & Navegador de  & Java & Sí \\ 
+ & & de gestión del conocimiento & conceptos &  &  \\
+\hline 
+HOZO & 5.6 & Universidad de & Amigable al & Java & Sí \\ 
+ & & Osaka & usuario & & \\
+\hline 
+Protégé & 5.1.0 & Universidad de Stanford & Herencia múltiple & Java & Sí \\ 
+\hline 
+\end{tabular} 
+\caption{Editores de ontologías}
+\label{tab: editores}
+\end{table}
+
+Un ejemplo de instanciación se ilustra en la figura \ref{onto:auctoritasDescription}, en la que se utilizó la variable syntacticQuery con el objetivo de facilitar su comprensión. Esta variable se refiere a una consulta sintáctica formulada en un lenguaje de consulta (por ejemplo: SQL, SPARQL, una petición REST, entre otros).
+
+\begin{minipage}{\textwidth}
+$Datasource(PostgreSQL), \ has(PostgreSQL, postgresConnection), \ type(PostgreSQL,local)$ \\
+$composedBy(PostgreSQL, autorPersonalPostgres).$ \\
+$Concept(autorPersonalPostgres), \ mappedTo(autorPersonalPostgres, syntacticQuery),$ \\
+$type(autorPersonalPostgres,AUTORPERSONAL), \ name(autorPersonalPostgres, Autor \ Personal).$\\
+$Connection(postgresConnection), \ user(postgresConnection,postgres),$ \\
+$password(postgresConnection,admin),$ \\
+$endpoint(postgresConnection, jdbc{:}postgresql{:}//localhost{:}5432/Autoridades).$ \\
+$Datasource(VIVO), \ has(VIVO, vivoConnection), \ composedBy(VIVO,institution),$ \\
+$composedBy(VIVO,autorPersonalVivo), \ type(PostgreSQL,http).$ \\
+$Concept(institution), \ mappedTo(institution,syntacticQuery), \ name(institution, Institution)$ \\
+$type(institution,AUTORCORPORATIVO).$\\
+$Concept(autorPersonalVivo), \ mappedTo(autorPersonalVivo, syntacticQuery),$ \\
+$type(autorPersonalVivo, AUTORPERSONAL), name(autorPersonalVivo, Autor \ Personal).$ \\
+$Connection(vivoConnection),$\\
+$endpoint(vivoConnection, $\\
+$http{:}//localhost{:}8080/vivo/api/sparqlQuery?email{=}vivoroot@mydomain.edu\&password{=}zas123..).$\\
+$Datasource(ORCID), \ composedBy(ORCID,autorPersonalOrcid), \ has(ORCID,orcidConnection),$ \\
+$type(ORCID, orcid).$ \\
+$Concept(autorPersonalOrcid), \ mappedTo(autorPersonalOrcid, syntacticQuery),$\\
+$type(autorPersonalOrcid,AUTORPERSONAL), \ name(autorPersonalOrcid, Autor \ Personal.)$ \\
+$Connection(orcidConnection),$\\
+$endpoint(orcidConnection, https{:}//pub{.}orcid{.}org/v1{.}2/search/orcid{-}bio/?q{=}).$\\
+$Datasource(AGROVOC), \ composedBy(AGROVOC, agrovocConcept),$\\
+$has(AGROVOC, virtuosoConnection), \ type(AGROVOC,http).$ \\
+$Concept(agrovocConcept), \ mappedTo(agrovocConcept, syntacticQuery), $\\
+$type(agrovocConcept, CONTROLEDTERMS), \ name(agrovocConcept, Termino \ Controlado)$\\
+$Connection(virtuosoConnection),$
+$endpoint(virtuosoConnection, http{:}//localhost{:}8890/sparql).$\\
+$Datasource(ACM), \ composedBy(ACM, acmConcept), \ has(ACM, virtuosoConnection),$\\
+$type(ACM,http).$ \\
+$Concept(acmConcept), \ mappedTo(acmConcept,syntacticQuery),$\\
+$type(acmConcept,CONTROLEDTERMS),  \ name(acmConcept, Termino \ Controlado)$\\
+\captionof{figure}{A-Box de la ontología desarrollada}
+\label{onto:auctoritasDescription}
+\end{minipage}
 
 \subsection{Publicación de la instancia de la ontología creada}
 
@@ -146,9 +213,15 @@ La publicación de la instancia de la ontología creada se refiere a su carga en
 
 \subsection{Consumo por una aplicación informática de la instancia de la ontología creada}
 
-El consumo por una aplicación informática de la instancia de la ontología creada procura, a partir de la definición terminológica de la ontología, obtener su instanciación y utilizarla para recuperar los datos requeridos.
+El consumo por una aplicación informática de la instancia de la ontología creada procura, a partir de la descripción de los términos de la ontología, obtener su instanciación y utilizarla para recuperar los datos requeridos. En este paso se utiliza la T-Box de la ontología como base para la interpretación semántica de la estructura de la fuente de datos a encuestar.
 
+La A-Box de la ontología brinda a la aplicación informática los datos necesarios para gestionar la conexión a la fuente de datos. A su vez, contiene los conceptos relevantes a recuperar y las consultas sintácticas que posibilitan este proceso.
 
+\section{Conclusiones parciales}
+
+El paradigma de las ciencias del diseño permitió definir el artefacto a generar como aporte teórico principal de la investigación. El proceso utilizado para la investigación en ciencias del diseño condujo las actividades a realizar como parte del presente trabajo.
+
+El método creado permite la integración de datos almacenados en fuentes estructuralmente heterogéneas, brindando una guía a los especialistas encargados de este proceso. La utilización de la metodología para el desarrollo de ontologías seleccionada, orientó satisfactoriamente el proceso de desarrollo de la ontología que se propone como parte del método.
 
 
 
