@@ -1,12 +1,83 @@
-\chapter{\large Título}\label{Capítulo 3}
+\chapter{\large Evaluación de la propuesta}\label{Capítulo 3}
 
 \pagestyle{fancy}
 \lhead{}
 \chead{}
-\rhead{Capítulo 3: Título}
+\rhead{Capítulo 3: Evaluación de la propuesta}
 \lfoot{}
 \cfoot{}
 \rfoot{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 %\renewcommand{\footrulewidth}{0.4pt}
 \vspace{-1cm}
+
+\section{Introducción}
+sdfsd
+
+\section{Selección de la estrategia de evaluación}
+Dependiendo del propósito de la evaluación y de las condiciones de la investigación empírica, existen tres grandes tipos de estrategias que pueden utilizarse: encuestas, casos de estudio y experimentos \citep{Wohlin2012}.
+
+Una encuesta es un sistema para recolectar información sobre o acerca de personas que describen, comparan o explican su conocimiento, actitudes y comportamiento \citep{Wohlin2012}. Una encuesta no permite el control sobre la ejecución de la medición, por lo que no es posible manipular variables como en otros métodos de investigación \citep{Wohlin2012}.
+
+Los casos de estudio en la ingeniería de software son investigaciones empíricas que se basan en múltiples fuentes de evidencia para investigar una instancia (o un pequeño número de ellas) de un fenómeno de ingeniería de software contemporáneo dentro de su contexto real, especialmente cuando el límite entre el fenómeno y el contexto no puede ser claramente definido \citep{Runeson:2012:CSR:2361717,Wohlin2012}. Constituyen una técnica donde factores clave que pueden incidir en la salida se identifican y se documenta la actividad \citep{stake1995art}. 
+
+Los experimentos (o experimentos controlados) en la ingeniería de software son un tipo de investigación empírica que manipula un factor o variable de la configuración estudiada. Basado en la aleatoriedad se aplican diferentes tratamientos a diferentes sujetos, mientras se mantienen otras variables constantes y se miden los efectos en las variables de salida \citep{Wohlin2012}. Constituyen una investigación formal, rigorosa y controlada en la que los factores claves son identificados y manipulados, mientras que otros factores en el contexto se mantienen sin cambio. 
+
+La diferencia entre casos de estudio y experimentos está determinada por el nivel de control del contexto \citep{Petersen:2009:CIS:1671248.1671293}. En un experimento diferentes situaciones son forzadas deliberadamente y el objetivo comúnmente es distinguir entre las dos situaciones. En un caso de estudio el contexto es controlado por el proyecto real analizado \citep{Wohlin2012}. Basados en los elementos expuestos, el autor de la presente investigación concluye que la realización de un caso de estudio constituye una estrategia viable para la evaluación de la misma. 
+
+\section{Preparación del caso de estudio}
+Según \cite{kitchenham1995case} para evitar el sesgo y asegurar la validez interna, es necesario crear una base sólida para evaluar los resultados de un caso de estudio. \cite{kitchenham1995case} proponen tres alternativas para preparar un estudio con el fin de facilitar esto:
+
+\begin{itemize}
+\item Una comparación de los resultados aplicando el método contra una línea base es una solución.
+\item Un proyecto hermano puede ser seleccionado como línea base. El proyecto bajo estudio emplea el nuevo método mientras que el proyecto hermano usa los métodos anteriores. Ambos proyectos deben ser comparables.
+\item Si el método se aplica a componentes del producto individuales, debe ser aplicado aleatoriamente a algunos componentes y a otros no.
+\end{itemize}
+
+Para el caso de estudio en cuestión se utilizarán las versiones 1.0 y 2.0 de la aplicación informática AUCTORITAS. La versión 1.0 de AUCTORITAS utiliza un acceso a datos incrustado en el código fuente de la aplicación y, para incorporar nuevas fuentes de datos, es necesario modificar su código fuente.
+
+El acceso a datos de la versión 2.0 de AUCTORITAS se desarrolló empleando el método propuesto en la presente investigación. El mismo depende de la conceptualización definida en una ontología y es extensible por medio de la modificación de la T-Box de la ontología, sin necesidad de modificar el código fuente de la aplicación.
+
+Según \cite{Wohlin2012}, la realización de un caso de estudio involucra cinco grandes pasos por los que transitar:
+
+\begin{enumerate}
+\item Diseño del caso de estudio: se definen los objetivos y se planifica el caso de estudio.
+\item Preparación para la recolección de los datos: se definen los procedimientos y protocolos para la recolección de los datos.
+\item Recolección de los datos: ejecución de la recolección de los datos en el caso estudiado.
+\item Análisis de los datos recolectados.
+\item Reporte del caso de estudio.
+\end{enumerate}
+
+\subsection{Diseño del caso de estudio}
+El \textbf{objetivo} del presente caso de estudio es \textbf{medir el nivel de flexibilidad que aporta aplicar el método propuesto en el desarrollo del acceso a datos de la aplicación informática AUCTORITAS}. Se definen los siguientes umbrales para la variable flexibilidad:
+
+\begin{itemize}
+\item Flexibilidad baja: es necesario modificar el código fuente de la aplicación para adicionar nuevas fuentes de datos y estas deben ser estructuralmente homogéneas.
+\item Flexibilidad media: es necesario modificar el código fuente de la aplicación para adicionar nuevas fuentes de datos pero estas pueden ser estructuralmente heterogéneas.
+\item Flexibilidad alta: no es necesario modificar el código fuente de la aplicación para adicionar nuevas fuentes de datos y estas pueden ser estructuralmente heterogéneas.
+\end{itemize}
+
+El presente caso de estudio se centra en la escalabilidad en cuanto a fuentes de datos de la aplicación informática AUCTORITAS. Se asume como escalabilidad el concepto elaborado por \cite{duboc2006framework} que la define como la cualidad de las aplicaciones informáticas caracterizada por el impacto causal que poseen aspectos del entorno del sistema según estos son variados por encima de los rangos operacionales.
+
+Las preguntas de investigación que conducirán el presente caso de estudio son:
+
+\begin{enumerate}
+\item ¿Qué fuentes de datos de las necesarias para el control de autoridades en el proyecto ELINF es posible integrar con el método propuesto?
+\item ¿Qué nivel de flexibilidad aporta la aplicación del método propuesto en el acceso a datos de la aplicación informática AUCTORITAS?
+\end{enumerate}
+
+Para la recolección de los datos se utilizará el formato de la tabla \ref{tabla: recoleccion}.
+
+\begin{table}
+\centering
+\begin{tabular}{c|c|c|c}
+\hline 
+Aplicación informática & Fuente de datos & Estructura & Modificación código fuente \\ 
+\hline 
+& & & \\
+\hline
+\end{tabular} 
+\caption{Tabla para recolectar datos en el caso de estudio.}
+\label{tabla: recoleccion}
+\end{table}
+
