@@ -49,13 +49,7 @@ Según \cite{Wohlin2012}, la realización de un caso de estudio involucra cinco 
 \end{enumerate}
 
 \subsection{Diseño del caso de estudio}
-El \textbf{objetivo} del presente caso de estudio es \textbf{medir el nivel de flexibilidad que aporta aplicar el método propuesto en el desarrollo del acceso a datos de la aplicación informática AUCTORITAS}. Se definen los siguientes umbrales para la variable flexibilidad:
-
-\begin{itemize}
-\item Flexibilidad baja: es necesario modificar el código fuente de la aplicación para adicionar nuevas fuentes de datos y estas deben ser estructuralmente homogéneas.
-\item Flexibilidad media: es necesario modificar el código fuente de la aplicación para adicionar nuevas fuentes de datos pero estas pueden ser estructuralmente heterogéneas.
-\item Flexibilidad alta: no es necesario modificar el código fuente de la aplicación para adicionar nuevas fuentes de datos y estas pueden ser estructuralmente heterogéneas.
-\end{itemize}
+El \textbf{objetivo} del caso de estudio es \textbf{medir qué por ciento de las fuentes de datos, necesarias para el control de autoridades en el proyecto ELINF, es posible integrar mediante el empleo del método propuesto en una aplicación informática}. 
 
 El presente caso de estudio se centra en la escalabilidad en cuanto a fuentes de datos de la aplicación informática AUCTORITAS. Se asume como escalabilidad el concepto elaborado por \cite{duboc2006framework} que la define como la cualidad de las aplicaciones informáticas caracterizada por el impacto causal que poseen aspectos del entorno del sistema según estos son variados por encima de los rangos operacionales.
 
@@ -66,7 +60,37 @@ Las preguntas de investigación que conducirán el presente caso de estudio son:
 \item ¿Qué nivel de flexibilidad aporta la aplicación del método propuesto en el acceso a datos de la aplicación informática AUCTORITAS?
 \end{enumerate}
 
-Para la recolección de los datos se utilizará el formato de la tabla \ref{tabla: recoleccion}.
+Se definen los siguientes umbrales para la variable flexibilidad:
+
+\begin{itemize}
+\item Flexibilidad baja: es necesario modificar el código fuente de la aplicación para adicionar nuevas fuentes de datos y estas deben ser estructuralmente homogéneas.
+\item Flexibilidad media: es necesario modificar el código fuente de la aplicación para adicionar nuevas fuentes de datos pero estas pueden ser estructuralmente heterogéneas.
+\item Flexibilidad alta: no es necesario modificar el código fuente de la aplicación para adicionar nuevas fuentes de datos y estas pueden ser estructuralmente heterogéneas.
+\end{itemize}
+
+El Comité de Expertos del proyecto ELINF identificó como fuentes de datos necesarias para el contro de autoridades las siguientes:
+
+\begin{itemize}
+\item Fichero de autoridad local: base de datos que contiene las entradas de autoridad de autores cubanos que no están registrados en fuentes internacionales.
+\item VIVO: aplicación informática que gestiona perfiles de investigadores. Esta aplicación se pretende implementar en la red de universidades miembros del proyecto ELINF.
+\item ORCID: fuente de datos internacional para la identificación de autores.
+\item Tesauro de la ACM: tesauro especializado en Ciencias de la Computación para el control de autoridades a nivel de epígrafes de materia.
+\item Tesauro AGROVOC de la FAO: tesauro especializado en Ciencias Agrícolas para el control de autoridades a nivel de epígrafes de materia.
+\end{itemize}
+
+\subsection{Recolección de los datos}
+
+De acuerdo con \cite{Lethbridge2005} las técnicas para la recolección de datos se pueden dividir en tres niveles:
+
+\begin{itemize}
+\item Primer nivel: Métodos en los que el investigador está en contacto directo con los sujetos y recolecta los datos en tiempo real. 
+\item Segundo nivel: Métodos indirectos en los que el investigador recolecta datos en bruto sin interactuar con los sujetos durante la recolección.
+\item Tercer nivel: Análisis independiente de artefactos de trabajo donde se utilizan datos disponibles y en algunos casos ya compilados.
+\end{itemize}
+
+La técnica para recolectar datos en la presente investigación cae en el tercer nivel, basándose en las investigaciones de \cite{Calzadilla-Reyes2015} y \cite{Gonzalez-Barroso2016}.
+
+El resultado de la recolección de datos se muestra en la tabla \ref{tabla: recoleccion}.
 
 \begin{table}
 \centering
@@ -74,10 +98,29 @@ Para la recolección de los datos se utilizará el formato de la tabla \ref{tabl
 \hline 
 Aplicación informática & Fuente de datos & Estructura & Modificación código fuente \\ 
 \hline 
-& & & \\
+AUCTORITAS 1.0 & Fichero de autoridad local & Modelo relacional & No\\
+\hline
+AUCTORITAS 1.0 & VIVO & Servicio REST & Sí\\
+\hline
+AUCTORITAS 1.0 & ORCID & Servicio REST & Sí\\
+\hline
+AUCTORITAS 1.0 & Tesauro ACM & Modelo RDF & Sí\\
+\hline
+AUCTORITAS 1.0 & Tesauro AGROVOC & Modelo RDF & Sí\\
+\hline
+AUCTORITAS 2.0 & Fichero de autoridad local & Modelo relacional & No\\
+\hline
+AUCTORITAS 2.0 & VIVO & Servicio REST & No\\
+\hline
+AUCTORITAS 2.0 & ORCID & Servicio REST & Sí\\
+\hline
+AUCTORITAS 2.0 & Tesauro ACM & Modelo RDF & No\\
+\hline
+AUCTORITAS 2.0 & Tesauro AGROVOC & Modelo RDF & No\\
 \hline
 \end{tabular} 
-\caption{Tabla para recolectar datos en el caso de estudio.}
+\caption{Datos recolectados en el caso de estudio.}
 \label{tabla: recoleccion}
 \end{table}
 
+\subsection{Análisis de los datos recolectados}
