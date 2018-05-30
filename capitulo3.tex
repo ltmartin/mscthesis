@@ -12,7 +12,7 @@
 \vspace{-1cm}
 
 \section{Introducción}
-sdfsd
+En este capítulo de presenta la evaluación del método para la integración de datos basado en ontologías OntoIntegra. Para la evaluación se utilizó un caso de estudio sobre dos versiones de la aplicación informática AUCTORITAS. La versión 1.0 fue desarrollada sin tomar en cuenta el método propuesto, mientras que la versión 2.0 fue desarrollada con un acceso a datos concebido acorde al método OntoIntegra.
 
 \section{Selección de la estrategia de evaluación}
 Dependiendo del propósito de la evaluación y de las condiciones de la investigación empírica, existen tres grandes tipos de estrategias que pueden utilizarse: encuestas, casos de estudio y experimentos \citep{Wohlin2012}.
@@ -36,7 +36,7 @@ Según \cite{kitchenham1995case} para evitar el sesgo y asegurar la validez inte
 
 Para el caso de estudio en cuestión se utilizarán las versiones 1.0 y 2.0 de la aplicación informática AUCTORITAS. La versión 1.0 de AUCTORITAS utiliza un acceso a datos incrustado en el código fuente de la aplicación y, para incorporar nuevas fuentes de datos, es necesario modificar su código fuente.
 
-El acceso a datos de la versión 2.0 de AUCTORITAS se desarrolló empleando el método propuesto en la presente investigación. El mismo depende de la conceptualización definida en una ontología y es extensible por medio de la modificación de la T-Box de la ontología, sin necesidad de modificar el código fuente de la aplicación.
+El acceso a datos de la versión 2.0 de AUCTORITAS se desarrolló empleando el método propuesto en la presente investigación. El mismo depende de la conceptualización definida en una ontología y es extensible por medio de la modificación de la A-Box de la ontología, sin necesidad de modificar el código fuente de la aplicación.
 
 Según \cite{Wohlin2012}, la realización de un caso de estudio involucra cinco grandes pasos por los que transitar:
 
@@ -124,3 +124,33 @@ AUCTORITAS 2.0 & Tesauro AGROVOC & Modelo RDF & No\\
 \end{table}
 
 \subsection{Análisis de los datos recolectados}
+El principal objetivo del análisis cualitativo de los datos es llegar a conclusiones a partir de los datos, manteniendo una clara cadena de evidencia \citep{Wohlin2012}. Existen dos partes diferentes de análisis sobre datos cualitativos: las técnicas generadoras de hipótesis y las técnicas para confirmación de hipótesis \citep{799955}. Las técnicas generadoras de hipótesis pretenden arribar a hipótesis a partir de los datos, mientras que las técnicas para confirmación de hipótesis se utilizan para demostrar que una hipótesis es verdadera. El análisis de los datos recolectados en el presente caso de estudio pretenderá demostrar la validez de la hipótesis de la investigación.
+
+El análisis de los datos puede realizarse con diferentes niveles de formalismo, \cite{Wohlin2012} mencionan los siguientes enfoques:
+
+\begin{itemize}
+\item Enfoques de inmersión: Son los enfoques menos estructurados, más dependientes de la intuición y las habilidades interpretativas del investigador. Pueden ser difíciles de combinar con los requerimientos para mantener y comunicar la cadena de evidencia.
+\item Enfoques de edición: Incluyen pocos códigos pre-elaborados.
+\item Enfoques basados en plantillas: Son más formales e incluyen preguntas de investigación creadas a priori.
+\item Enfoques quasi-estadísticos: Son altamente formales e incluyen, por ejemplo, cálculos o frecuencias de palabras o frases.
+\end{itemize}
+
+El análisis de los datos en el presente caso de estudio utilizará un enfoque basado en plantillas.
+
+La versión 1.0 de la aplicación informática AUCTORITAS fue desarrollada con una clase de acceso a datos, en la cual se gestionaba el acceso a una base de datos relacional conteniendo los registros de autoridades locales. La lógica de acceso a datos estaba atada al consumo de datos a partir de un modelo relacional, por lo que incorporar nuevas fuentes con un modelo de datos diferente provocaba cambios en la lógica de acceso a datos de la aplicación.
+
+El acceso a datos de la versión 2.0 de AUCTORITAS de desarrolló siguiendo el método propuesto en el presente trabajo. La lógica de acceso a datos se hizo dependiente de la parte conceptual de la ontología creada, mientras que las fuentes de datos son configuradas en la instanciación de dicha ontología, constituyendo su A-Box. Esto posibilitó que la integración de nuevas fuentes de datos no produjese cambios en el código fuente de la aplicación excepto en un caso.
+
+En el caso de la fuente de datos ORCID fue necesario modificar el código fuente de la aplicación, debido a que esta fuente utiliza un mecanismo de autenticación OAuth 2.0 que no había sido contemplado en el desarrollo de AUCTORITAS. Teniendo esto en cuenta, se realizó la descripción de la fuente de datos en la instancia de ontología, se incorporó el mecanismo de autenticación a la aplicación y las pruebas resultaron satisfactorias.
+
+La realización del caso de estudio permitió identificar que la versión 1.0 de AUCTORITAS posee una flexibilidad media en su acceso a datos, mientras que la aplicación del método propuesto en el desarrollo de la versión 2.0 aportó un nivel de flexibilidad alto. De igual manera, fue posible verificar que el método propuesto permite integrar el cien por ciento de las fuentes de datos necesarias para el control de autoridades en el proyecto ELINF. Los resultados arrojados por el caso de estudio llevado a cabo comprueban la validez de la hipótesis propuesta en la presente investigación.
+
+\section{Conclusiones del capítulo}
+
+La realización del caso de estudio da lugar a las siguientes conclusiones respecto a la evaluación del método propuesto:
+
+\begin{itemize}
+\item La herramienta informática desarrollada como instanciación del método propuesto facilitó la obtención de información requerida para el proceso de  control de autoridades en el proyecto ELINF.
+\item La utilización de Integración de Datos Basada en Ontologías, disminuyó el acoplamiento de la herramienta informática desarrollada como instanciación del método propuesto, con la configuración de las fuentes de datos requeridas para el proceso de  control de autoridades en el proyecto ELINF.
+\item La instanciación del método propuesto en el acceso a datos de la aplicación informática AUCTORITAS permitió integrar la totalidad de las fuentes de datos requeridas por el proyecto ELINF para el proceso de  control de autoridades.
+\end{itemize}
