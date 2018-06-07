@@ -15,7 +15,55 @@
 \section{Paradigma utilizado en el desarrollo del método}
 La investigación en la disciplina de sistemas de información (SI) se caracteriza por dos paradigmas: las ciencias del comportamiento y las ciencias del diseño \citep{Hevner:2004:DSI:2017212.2017217}. El primer paradigma persigue el desarrollo y verificación de teorías que expliquen o pronostiquen el comportamiento humano u organizacional. El paradigma de las ciencias del diseño tiene como fin la creación de innovaciones que definan ideas prácticas, capacidades tecnológicas y productos a través de los cuales puede lograrse el análisis, diseño, implementación, gestión y uso de sistemas de información de manera efectiva y eficiente \citep{Denning:1997:NSC:253671.253755}. Un SI es un sistema basado en computadoras que ayuda a la gestión y uso de la información en una organización o entre varias organizaciones \citep{GarciaNoguera2009}. Analizando la naturaleza del problema tratado en esta investigación y la relación entre su campo de acción (el método para integrar datos relativos al control de autoridades en el proyecto ELINF) y la disciplina de SI, el desarrollo de la solución se concibió y ejecutó bajo el paradigma de las ciencias del diseño.
 
-Las ciencias del diseño crean y evalúan artefactos orientados a mejorar y entender el comportamiento de los sistemas de información, estos artefactos pueden ser constructos, modelos, métodos e instanciaciones \citep{March:1995:DNS:1700865.1700867}. Los constructos pertenecen al vocabulario conceptual de un dominio y son empleados por los modelos para representar una situación del mundo real en términos del diseño de un problema y su espacio de solución \citep{Simon:1996:SA:237774}. La búsqueda dentro de ese espacio de solución es guiada por métodos, los cuales pueden ser algoritmos matemáticos, descripciones textuales del proceso de búsqueda o combinaciones de ambas \citep{Hevner:2004:DSI:2017212.2017217}. Las instanciaciones demuestran la viabilidad de implementar los métodos y modelos, a la vez que facilitan la evaluación concreta del artefacto que representan.
+Las ciencias del diseño crean y evalúan artefactos orientados a mejorar y entender el comportamiento de los sistemas de información, estos artefactos pueden ser constructos, modelos, métodos e instanciaciones \citep{March:1995:DNS:1700865.1700867}. Los constructos pertenecen al vocabulario conceptual de un dominio y son empleados por los modelos para representar una situación del mundo real en términos del diseño de un problema y su espacio de solución \citep{Simon:1996:SA:237774}. 
+
+Los modelos son abstracciones y representaciones de la realidad \citep{Hevner:2004:DSI:2017212.2017217}. Estos contribuyen a la comprensión de los problemas y las soluciones y frecuentemente representan el vínculo entre el problema y los componentes de la solución permitiendo la exploración de los efectos causados por las decisiones del diseño en el mundo real \citep{Hevner:2004:DSI:2017212.2017217}.
+
+La búsqueda dentro de ese espacio de solución es guiada por métodos, los cuales definen procesos, proveen una guía sobre como resolver problemas. Estos pueden ser algoritmos matemáticos que definen explícitamente el proceso de búsqueda de la solución, descripciones textuales informales de buenas prácticas o combinaciones de ambas \citep{Hevner:2004:DSI:2017212.2017217}.  
+
+Las instanciaciones muestran cómo los constructos, modelos o métodos pueden implementarse en un sistema. Ellas demuestran la viabilidad de implementar los métodos y modelos, a la vez que facilitan la evaluación concreta del artefacto que representan. Por otra parte le permiten a los investigadores aprender sobre el mundo real y cómo el artefacto lo afecta \citep{Hevner:2004:DSI:2017212.2017217}.
+
+Es importante mencionar que para el desarrollo de esta investigación se consideraron además las guías para la investigación en ciencias del diseño, propuestas por \cite{Hevner:2004:DSI:2017212.2017217}. Estas guías, fueron establecidas con el propósito de auxiliar a investigadores, revisores, editores y lectores en la comprensión de los requerimientos para una investigación efectiva en ciencias del diseño y se sintetizan el la tabla \ref{tab: guias}.
+
+\begin{table}
+\begin{tabular}{|c|c|}
+\hline 
+Guía & Descripción \\ 
+\hline
+Guía 1: El diseño como un artefacto & La investigación en ciencias del diseño debe \\
+& producir un artefacto viable en la forma de un constructo, un modelo, \\
+& un método o una instanciación. \\
+\hline
+Guía 2: Relevancia del problema & El objetivo de la investigación en ciencias del diseño  \\
+& es desarrollar soluciones basadas en la tecnología para problemas \\
+& de negocio importantes y relevantes. \\
+\hline
+Guía 3: Evaluación del diseño & La utilidad, calidad y eficacia de un artefacto de diseño debe \\
+& ser rigurosamente demostrada a través de métodos de evaluación \\
+& bien ejecutados. \\
+\hline
+Guía 4: Contribuciones de la investigación & La investigación efectiva en ciencias del diseño  \\
+& debe proveer contribuciones claras y verificables en las áreas \\
+& del artefacto de diseño, fundamentos del diseño \\
+& y/o metodologías del diseño. \\
+\hline
+Guía 5: Rigor de la investigación & La investigación en ciencias del diseño se basa \\
+& en la aplicación de métodos rigurosos tanto en la construcción \\
+& como en la evaluación del artefacto de diseño. \\
+\hline
+Guía 6: Diseño como proceso de búsqueda & La búsqueda de un artefacto efectivo requiere  \\
+& la utilización de los métodos disponibles para alcanzar el fin \\
+& requerido mientras se satisfacen las reglas en el entorno \\
+& del problema. \\
+\hline
+Guía 7: Comunicación de la investigación & La investigación en ciencias del diseño debe ser \\
+& presentada efectivamente tanto a audiencias \\
+& especializadas como a administrativos. \\
+\hline
+\end{tabular} 
+\caption{Guías para la investigación en ciencias del diseño. Tomado de \citep{Hevner:2004:DSI:2017212.2017217}.}
+\label{tab: guias}
+\end{table}
 
 La presente investigación fue desarrollada según el proceso definido por \cite{Peffers2006} para las investigaciones en ciencias del diseño. Este proceso propone seis actividades secuenciales: identificación del problema y motivación, objetivos de la solución, diseño y desarrollo, demostración, evaluación y comunicación. Los resultados de la primera y segunda actividad fueron expresados en la introducción de este documento. El diseño y desarrollo incluye determinar las funcionalidades deseadas del artefacto y su arquitectura para luego crear el artefacto en cuestión. Los elementos esenciales que debe poseer una aplicación informática para el OBDA/OBDI fueron sintetizados en el subepígrafe \ref{Acceso e Integración de Datos Basado en Ontologías}. Los artefactos
 creados serán descritos en los epígrafes siguientes, mientras que la demostración de su eficacia en la solución del problema, así como la observación y medición de su desempeño relativos a las actividades cuatro y cinco del proceso serán expuestas en el Capítulo \ref{Capítulo 3}. Como evidencia de la comunicación a otros investigadores del problema abordado en la investigación y su relevancia, el artefacto creado, su utilidad y su efectividad, se encuentran artículos publicados en revistas y trabajos presentados en eventos por el autor de esta investigación.
@@ -57,11 +105,9 @@ Cada vez son más los servicios que se publican en la Web usando la ``Transferen
 
 El análisis semántico de la información almacenada en cada fuente de datos pretende determinar los conceptos contenidos en las mismas cuyos datos asociados se desean recuperar. En este paso interviene un Experto del dominio y un Ingeniero de conocimiento. El Ingeniero de conocimiento tiene la función de traducir los elementos presentes en una fuente de datos a conceptos comprensibles por un usuario externo.
 
-En este paso un Usuario de conceptualización requiere ciertos conceptos sobre un dominio específico, esta petición se la realiza a un Experto del dominio. El Experto del dominio determina exactamente qué elementos del dominio son los que necesita el Usuario de conceptualización y se lo informa al Ingeniero de conocimiento. El Ingeniero de conocimiento modela conceptualmente los elementos recibidos en términos conocidos por el Usuario de conceptualización y retorna la conceptualización elaborada. Este proceso se ilustra en la figura \ref{fig: conceptsExtraction}.
+En este paso un Usuario de conceptualización requiere ciertos conceptos sobre un dominio específico, esta petición se la realiza a un Experto del dominio. El Experto del dominio determina exactamente qué elementos del dominio son los que necesita el Usuario de conceptualización y se lo informa al Ingeniero de conocimiento. El Ingeniero de conocimiento modela conceptualmente los elementos recibidos en términos conocidos por el Usuario de conceptualización y retorna la conceptualización elaborada. Este proceso se ilustra en la figura \ref{fig: conceptsExtraction}.\\
 
-
-\textbf{Proceso de desarrollo de la ontología según la metodología METHONTOLOGY}
-
+\textbf{Proceso de desarrollo de la ontología según la metodología METHONTOLOGY}\\
 
 El proceso de desarrollo de una ontología se refiere a cuáles actividades deben realizarse al construir una ontología \citep{Gomez-Perez:2007:OEE:1199560}. La metodología METHONTOLOGY propone la realización de tres categorías de actividades que se ilustran en la figura \ref{fig: methontology}.
 
@@ -102,7 +148,7 @@ Concepto \equiv Thing \sqcap \exists mapeo.Literal
 \label{onto:elementosBasicosOntologiaOBDI}
 \end{equation}
 
-La actividad de \textit{implementación} construye modelos computables en un lenguaje de ontologías \citep{Gomez-Perez:2007:OEE:1199560}. Este modelo se construyó utilizando el Lenguaje de Ontologías Web por medio de la herramienta Protégé y se ilustra en la figura \ref{fig: ontologiaProtege}.
+La actividad de \textit{implementación} construye modelos computables en un lenguaje de ontologías \citep{Gomez-Perez:2007:OEE:1199560}. Este modelo se construyó utilizando el Lenguaje de Ontologías Web por medio de la herramienta Protégé y se ilustra en la figura \ref{fig: ontologiaProtege}.\\
 
 \begin{figure}
 \begin{center}
@@ -118,7 +164,7 @@ $Connection \ \equiv \ Thing \ \sqcap \ \exists endpoint.Literal \ \sqcap \ =1 e
 $Datasource \ \equiv \ Thing \ \sqcap \ \exists composedBy.Concept \ \sqcap \ \exists has.Connection \ \sqcap \ =1 has \ \sqcap \ type.Literal \ \sqcap \ =1 type$ \\
 \captionof{figure}{T-Box de la ontología desarrollada}
 \label{onto:hdrm}
-\end{minipage}
+\end{minipage}\\
 
 \begin{figure}
 \begin{center}
