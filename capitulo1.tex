@@ -116,7 +116,49 @@ La identificación de los conceptos candidatos para la inclusión en la ontolog�
 
 Cada metodología comprende algunas actividades y técnicas para soportar el desarrollo de ontologías. El análisis de la literatura ha revelado la existencia de metodologías que no proveen suficientes detalles para el empleo de sus actividades y técnicas. Para propósitos de análisis, este trabajo clasificará las metodologías en tres grupos de acuerdo a este criterio: suficientes detalles, algunos detalles e insuficientes detalles. Las metodologías que no brindan detalles o estos son muy vagos se clasificarán como de insuficientes detalles. Por otra parte, las metodologías que no cubren completamente los detalles pero al menos proporcionan algunos detalles sobre sus actividades y técnicas se clasificarán como algunos detalles. Asimismo, las metodologías clasificadas como suficientes detalles proveen un razonable nivel de detalles sobre las actividades y técnicas que emplean, permitiendo al lector comprenderlas claramente. 
 
-Una clasificación de las metodologías analizadas de acuerdo a los criterios anteriormente expuestos se brinda en el trabajo de \cite{Iqbal2013}. Posterior al análisis de diferentes metodologías para el desarrollo de ontologías se decidió utilizar para el presente trabajo METHONTOLOGY ya que recomienda un ciclo de vida, es reutilizable y provee suficientes detalles sobre las técnicas y actividades empleadas en ella.
+Una clasificación de las metodologías analizadas de acuerdo a los criterios anteriormente expuestos se muestra en la tabla \ref{tab:tablaComparativa}. Posterior al análisis de diferentes metodologías para el desarrollo de ontologías se decidió utilizar para el presente trabajo METHONTOLOGY ya que recomienda un ciclo de vida, es reutilizable y provee suficientes detalles sobre las técnicas y actividades empleadas en ella.
+
+\begin{table*}[!ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{p {3,5cm} p {2cm} p {2cm} p {2cm} p {2cm} p {2cm} p {2cm} p {2cm} p {2cm}}
+\hline 
+Metodologías & Tipo de Desarrollo & Construcción colaborativa & ¿Reutilizable? & Dependiente de la aplicación & Ciclo de vida & Estrategias para identificar los conceptos & Nivel de detalle & ¿Interoperable? \\ 
+\hline 
+TOVE & Basada en etapas & No & Sí & Semi independiente & No & Media & Algunos detalles & No \\ 
+
+\textit{Enterprise model approach} & Basada en etapas & No & Sí & Independiente & No & Media & Algunos detalles & No \\ 
+ 
+METHONTOLOGY & Prototipo evolutivo & No & Sí & Independiente & Sí & Media & Suficientes detalles & No \\ 
+ 
+KBSI IDEF5 & Prototipo evolutivo & No & Sí & Independiente & No & No es clara & Algunos detalles & No \\ 
+ 
+Ontolingua & Desarrollo modular & Sí & Sí & Independiente & No & No es clara & Algunos detalles & Sí \\ 
+ 
+KACTUS & Desarrollo modular & No & Sí & Dependiente & No & Estrategia arriba-abajo & Insuficientes detalles & No \\ 
+ 
+PLINIUS & Basada en guías & No & No & Independiente & No & Estrategia abajo-arriba & Algunos detalles & No \\ 
+ 
+ONIONS & Desarrollo modular basado en guías & No & No & Dependiente & No & No es clara & Insuficientes detalles & Sí \\ 
+ 
+Mikrokosmos & Basada en guías & No & No & Dependiente & No & Estrategia basada en reglas & Algunos detalles & No \\ 
+ 
+MENELAS & Basada en guías & No & No & Dependiente & No & Grafos de conceptos & Insuficientes detalles & No \\ 
+ 
+SENSUS & No menciona preferencias & Sí & Sí & Semi independiente & No & Abajo-arriba & Algunos detalles & Sí \\ 
+ 
+Cyc & Prototipo evolutivo & No & Sí & Independiente & No & No es clara & Algunos detalles & No \\ 
+ 
+UPON & Prototipo evolutivo & No & Sí & Independiente & Sí & Media & Algunos detalles & No \\ 
+
+Método 101 & Prototipo evolutivo & No & Sí & Independiente & No & Consenso del desarrollador & Algunos detalles & No \\ 
+
+On-To-Knowledge & Prototipo evolutivo & No & No & Dependiente & Sí & Media & Algunos detalles & No \\ 
+\hline 
+\end{tabular}} 
+\caption{Comparación de las metodologías analizadas. Tomado de \citep{Iqbal2013}}
+\label{tab:tablaComparativa}
+\end{table*}
 
 \subsection{Datos Enlazados Abiertos}
 Los Datos Enlazados Abiertos son un conjunto de principios y buenas prácticas para la publicación de datos en la Web. Estos datos pueden estar dispersos geográficamente y pertenecer a una o varias organizaciones. En este sentido \cite{Berners-Lee2006} propone cuatro principios:
