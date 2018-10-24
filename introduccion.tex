@@ -29,13 +29,21 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \vspace{-1cm}
 
-El proyecto ``Tecnologías de la Información y la Comunicación apoyando los procesos educativos y la gestión del conocimiento en la educación superior'' (ELINF) tiene como objetivo aumentar la capacidad de las universidades asociadas para diseñar y aplicar de manera apropiada las Tecnologías de la Información y la Comunicación (TIC). Para cumplimentar esta meta está en desarrollo una plataforma nacional que apoye los servicios educacionales y de información en todas las universidades cubanas. Los sistemas integrados de gestión bibliotecaria, sistemas para la gestión de repositorios digitales, sistemas para la gestión de investigaciones y entornos virtuales de aprendizaje forman parte del modelo de referencia de ELINF como se ilustra en la figura \ref{fig: referenceModel}. Las herramientas informáticas que constituyen la instanciación del modelo \ref{fig: referenceModel} gestionan, entre otros elementos, artículos científicos y libros.
+El proyecto ``Las Tecnologías de la Información y la Comunicación apoyando los procesos educativos y la gestión del conocimiento en la educación superior'' (ELINF) tiene como objetivos \citep{Ciudad-Ricardo2017}:
+
+\begin{itemize}
+\item Aumentar la capacidad de las universidades asociadas para diseñar y aplicar de manera apropiada las Tecnologías de la Información y la Comunicación (TIC).
+\item Mejorar las capacidades de las universidades miembro en la gestión de la información aplicada al aprendizaje y la investigación.
+\item Desarrollar una plataforma nacional que apoye los servicios educacionales y de información de todas las universidades cubanas.
+\end{itemize}
+
+Los sistemas integrados de gestión bibliotecaria, sistemas para la gestión de repositorios digitales, sistemas para la gestión de investigaciones y entornos virtuales de aprendizaje forman parte del modelo de referencia de ELINF como se ilustra en la figura \ref{fig: referenceModel} y contribuyen a la realización de estos objetivos. Las herramientas informáticas que constituyen la instanciación del modelo ilustrado en la figura \ref{fig: referenceModel} gestionan, entre otros elementos, artículos científicos y libros.
 
 \begin{figure}
 \begin{center}
 	\includegraphics[width=0.5\textwidth]{img/referenceModel.png}
 \end{center}
-\caption{Modelo de referencia del proyecto ELINF. Tomado de \citep{Goovaerts2014}}
+\caption{Modelo de referencia del proyecto ELINF. Tomado de \citep{Ciudad-Ricardo2017}}
 \label{fig: referenceModel}
 \end{figure}
 
@@ -74,7 +82,7 @@ La misión de la Autoridad Internacional del ISNI (``ISNI International Authorit
 
 Con el objetivo de almacenar los datos con vistas a su posterior procesamiento y recuperación, variadas son las estructuras empleadas para realizar de forma eficiente esta tarea \citep{Gutierrez2011,Vavliakis2013,Lacasta2013}. Las bases de datos relacionales han sido empleadas durante varias décadas para estructurar los datos y recuperarlos de forma eficiente \citep{maier1983theory,Shanmugasundaram1999,Ilyas2004,Spanos2012}. En los últimos años la utilización de bases de datos ``No-SQL'' ha ganado popularidad con el objetivo de almacenar datos en forma de documentos \citep{Pokorny2013,Moniruzzaman2013}. La utilización del modelo de datos ``Marco de trabajo para la descripción de recursos'' (``Resource Description Framework'' - RDF, por sus siglas de acuerdo al término en idioma inglés) ha contribuido a aportar semántica a los datos almacenados, proveyendo un valor añadido a la información \citep{Berners-Lee2001,Konstantinou2014,Sule2016}.
 
-En Cuba en el momento en que se realiza la presente investigación no existe un registro central para el control de autoridades, las instituciones realizan este proceso de forma aislada, provocando redundancia en el trabajo. De igual manera, no se reutilizan los registros de autoridades que comparten instituciones extranjeras. Esta situación dificulta la localización de la producción intelectual generada y/o almacenada en la Isla, a la vez que dificulta compartir las entradas de autoridad pertenecientes a autores cubanos con el resto del mundo.
+A partir de los análisis realizados por el autor en varias de las principales instituciones bibliotecarias, se pudo constatar que en Cuba en el momento en que se realiza la presente investigación no existe un registro central para el control de autoridades, las instituciones realizan este proceso de forma aislada, provocando redundancia en el trabajo. De igual manera, no se reutilizan los registros de autoridades que comparten instituciones extranjeras. Esta situación dificulta la localización de la producción intelectual generada y/o almacenada en la Isla, a la vez que dificulta compartir las entradas de autoridad pertenecientes a autores cubanos con el resto del mundo.
 
 La integración de fuentes de datos es el problema de interconectar y acceder a fuentes heterogéneas de datos \citep{Nachouki2011}. En la medida en que las organizaciones han evolucionado este problema se ha convertido en un importante campo de investigación tanto para la academia como para la industria \citep{Nachouki2011}. Aunque la dependencia conceptual es casi universal en el diseño de sistemas de información, también produce una gama de consecuencias negativas incluyendo la inflexibilidad de los sistemas, la heterogenidad en las formas de almacenar los datos, así como aumentos en los costos de mantenimiento \citep{McGinnes2015}. La heterogeneidad entre dos o más sistemas de bases de datos ocurre cuando estas utilizan diferente infraestructura de software o hardware, siguen diferentes convenciones sintácticas y modelos de representación o cuando interpretan de manera diferente datos similares \citep{Spanos2012}.
 
@@ -83,6 +91,8 @@ Con el propósito de contribuir a la solución de este problema en el pasado se 
 Un enfoque para la integración de datos empresariales provenientes de fuentes heterogéneas de datos y descentralizadas es la mediación semántica. Este enfoque por una parte elimina la necesidad de un repositorio central de datos o un esquema federado para todos los datos y, por otra parte, introduce una capa semántica encima de las descripciones de estructuras de datos sintácticas existentes para evitar los conflictos semánticos en la integración \citep{ElKadiri2015}. 
 
 Con el advenimiento de la Web, la gestión de datos se enfocó en la variedad de información disponible en este nuevo medio. \cite{Janev2011} plantean que las tecnologías semánticas se utilizan en su mayoría para la integración de datos y para mejorar las búsquedas. Según \citep{Hoang2014}, la integración de datos guiada por ontologías representa una solución flexible, sostenible y extensible. Un paradigma reciente que combina la posibilidad de utilizar razonamiento sobre el conocimiento de un dominio codificado en una ontología, con un mecanismo que permite el uso de la misma ontología para un acceso integrado de alto nivel a las fuentes de datos es el Acceso e Integración de Datos Basado en Ontologías (``Ontology-Based Data Access and Integration'' - OBDA/OBDI, por sus siglas de acuerdo al término en idioma inglés) \citep{Calvanese2016,Calvanese2017}.
+
+Para la realización del control de autoridades a nivel internacional se comparten ficheros utilizando el formato RDF \citep{Sandberg2016}, se exponen servicios en la Web \citep{ORCID2017}, se crean bases de datos locales que luego se exponen en por medio de aplicaciones informáticas en la Web \citep{OCLCOnlineComputerLibraryCenterInc.2014}. La variedad de enfoques utilizados para contribuir a la realización del control de autoridades provoca heterogeneidad estructural entre las fuentes de datos utiizadas en el proceso.
 
 Teniendo en cuenta la heterogeneidad estructural de las fuentes de datos disponibles actualmente para realizar el control de autoridades en el proyecto ELINF se establece como \textbf{problema de investigación} el siguiente: ¿Cómo integrar los datos relativos al control de autoridades almacenados de forma heterogénea en las fuentes de datos utilizadas por el proyecto ELINF?
 
@@ -93,7 +103,7 @@ Esta investigación se propone como \textbf{objetivo general} desarrollar un mé
 \begin{enumerate}
 \item Identificar los referentes teóricos que soportan la integración semántica de datos en aplicaciones informáticas.
 \item Desarrollar un método con componentes semánticos que permita integrar en una aplicación informática datos almacenados de forma heterogénea.
-\item Evaluar el método desarrollado mediante un caso de estudio con datos reales relativos al control de autoridades almacenados de forma heterogénea.
+\item Validar el método desarrollado mediante un caso de estudio con datos reales relativos al control de autoridades almacenados de forma heterogénea.
 \end{enumerate}
 
 Se plantea como \textbf{hipótesis de la investigación} que, si se desarrolla un método con componentes semánticos para la integración de datos almacenados de forma heterogénea, será posible integrar los datos relativos al control de autoridades almacenados en las fuentes de datos utilizadas por el proyecto ELINF.
@@ -124,7 +134,7 @@ Durante toda la investigación se utilizará el método analítico - sintético,
 
 El método inductivo - deductivo posee especial relevancia en la formulación de la hipótesis y en la elaboración de conclusiones lógicas. Por medio del método histórico - lógico será posible representar los elementos del estado del arte relevantes a la temática en un orden cronológico que permita comprender la evolución de la misma.
 
-El método hipotético - deductivo de conjunto con el inductivo - deductivo permitirá arribar a conclusiones particulares a partir de la hipótesis, que luego serán validadas experimentalmente. Esto posibilitará reafirmar la validez de la hipótesis de la investigación.
+El método hipotético - deductivo de conjunto con el inductivo - deductivo permitirá arribar a conclusiones particulares a partir de la hipótesis, que luego serán validadas a través de un caso de estudio. Esto posibilitará reafirmar la validez de la hipótesis de la investigación.
 
 Por medio de la modelación será posible generar componentes relevantes para la aplicación del método propuesto, estando estrechamente relacionado con el método analítico - sintético y el método sistémico.
 
