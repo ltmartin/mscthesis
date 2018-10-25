@@ -120,6 +120,8 @@ Las bases de datos no relacionales, incluyendo las jerárquicas, orientadas a gr
 
 Cada vez son más los servicios que se publican en la Web usando la ``Transferencia de estado representacional'' (``Representational state transfer'' - REST, por sus siglas de acuerdo al término en idioma inglés) \citep{Pautasso2014}. El estilo de arquitectura REST enfatiza la escalabilidad de las interacciones entre los componentes de las aplicaciones informáticas y promueve la reutilización de los componentes reduciendo su acoplamiento \citep{Pautasso2014}. Resulta posible considerar aplicaciones externas que exponen sus datos a través de REST como fuentes de datos. En este caso, el análisis estructural de la fuente de datos se centraría en la estructura sintáctica que debe poseer la petición a formular para extraer los datos a integrar.
 
+El Experto de dominio en este paso analiza cómo están físicamente distribuidos los datos que se pretenden integrar en las fuentes de datos que los almacenan. Posteriormente formula las consultas sintácticas que permitirán recuperar dichos datos utilizando los constructos definidos para este fin en las fuentes de datos a encuestar.
+
 \subsection{Análisis semántico de la información almacenada en cada fuente de datos}
 
 En el análisis semántico de la información almacenada en cada fuente de datos se determinan los conceptos contenidos en las mismas cuyos datos asociados se desean recuperar. En este paso interviene un Experto del dominio y un Ingeniero de conocimiento. El Ingeniero de conocimiento tiene la función de traducir los elementos presentes en una fuente de datos a conceptos comprensibles por un usuario externo.
@@ -178,7 +180,7 @@ La actividad de \textit{implementación} construye modelos computables en un len
 \end{figure}
 
 \begin{minipage}{\textwidth}
-$Concept \ \equiv \ Thing \ \sqcap \ \exists  mappedTo.Literal \ \sqcap \ =1 mappedTo \ \sqcap \exists  type.Literal \ \sqcap \ =1 type \ \sqcap \ \forall name.String$ \\
+$Concept \ \equiv \ Thing \ \sqcap \ \exists  mappedTo.Literal \ \sqcap \ =1 mappedTo \ \sqcap \exists  type.Literal \ \sqcap \ =1 type \ \sqcap \ \exists name.String \sqcap \ =1 name$ \\
 $Connection \ \equiv \ Thing \ \sqcap \ \exists endpoint.Literal \ \sqcap \ =1 endpoint \ \sqcap \ \forall user.String \ \sqcap \ \forall password.String $ \\
 $Datasource \ \equiv \ Thing \ \sqcap \ \exists composedBy.Concept \ \sqcap \ \exists has.Connection \ \sqcap \ =1 has \ \sqcap \ type.Literal \ \sqcap \ =1 type$ \\
 \captionof{figure}{T-Box de la ontología desarrollada}
