@@ -77,7 +77,7 @@ En la actividad de \textit{evaluación} se observa y mide cuánto influye el art
 
 La actividad \textit{comunicación} pretende poner en conocimiento de investigadores y otras audiencias relevantes, el problema y su importancia, el artefacto, su utilidad y novedad, el rigor de su diseño y su efectividad \citep{Peffers2006}.
 
-Los resultados de la primera y segunda actividad fueron expresados en la introducción de este documento. El diseño y desarrollo incluye determinar las funcionalidades deseadas del artefacto y su arquitectura para luego crear el artefacto en cuestión. Los elementos esenciales que debe poseer una aplicación informática para el OBDA/OBDI fueron sintetizados en el subepígrafe \ref{Acceso e Integración de Datos Basado en Ontologías}. Los artefactos creados serán descritos en los epígrafes siguientes, mientras que la demostración de su eficacia en la solución del problema, así como la observación y medición de su desempeño relativos a las actividades cuatro y cinco del proceso serán expuestas en el Capítulo \ref{Capítulo 3}. Como evidencia de la comunicación a otros investigadores del problema abordado en la investigación y su relevancia, el artefacto creado, su utilidad y su efectividad, se encuentran artículos publicados en revistas y trabajos presentados en eventos por el autor de esta investigación.
+Los resultados de la primera y segunda actividad fueron expresados en la introducción de este documento. El diseño y desarrollo incluye determinar las funcionalidades deseadas del artefacto y su arquitectura para luego crear el artefacto en cuestión. Los elementos esenciales que debe poseer una aplicación informática para el OBDA/OBDI fueron sintetizados en el subepígrafe \ref{Acceso e Integración de Datos Basado en Ontologías}. Los artefactos creados serán descritos en los epígrafes siguientes, mientras que la demostración de su eficacia en la solución del problema, así como la observación y medición de su desempeño relativos a las actividades cuatro y cinco del proceso serán expuestas en el Capítulo \ref{Capítulo 3}. Como evidencia de la comunicación a otros investigadores del problema abordado en la investigación y su relevancia, el artefacto creado, su utilidad y su efectividad, se encuentran artículos publicados en revistas y trabajos presentados en eventos por el autor de esta investigación \citep{Tabares-Martin2015,Tabares-Martin2016,Tabares-Martin20161}.
 
 \begin{figure}
 \begin{center}
@@ -94,6 +94,9 @@ El método propuesto para la Integración de Datos Basada en Ontologías se deno
 \textbf{Definición 2.1.2} \textit{Sea una ontología compuesta por una parte conceptual (T-Box) y una parte asercional (A-Box). Se denomina instancia de la ontología a su parte asercional.}
 
 \section{OntoIntegra}
+
+\begin{minipage}{\textwidth}
+
 El aporte teórico fundamental de esta investigación es un método para la integración semántica de datos almacenados en fuentes estructuralmente heterogéneas. La figura \ref{fig: metodoOntoIntegra} ilustra el método propuesto, denominado OntoIntegra. Este método describe la obtención de información conceptualmente integrada a través de cinco pasos fundamentales:
 
 \begin{enumerate}
@@ -104,6 +107,8 @@ El aporte teórico fundamental de esta investigación es un método para la inte
 \item Consumo por una aplicación informática de la instancia de la ontología creada.
 \end{enumerate}
 
+\end{minipage}
+
 \begin{figure}
 \begin{center}
 	\includegraphics[width=0.8\textwidth]{img/Metodo_OntoIntegra.png}
@@ -111,6 +116,7 @@ El aporte teórico fundamental de esta investigación es un método para la inte
 \caption{Esquema representativo del método OntoIntegra}
 \label{fig: metodoOntoIntegra}
 \end{figure}
+
 
 \subsection{Análisis estructural de cada fuente de datos}
 
@@ -162,7 +168,7 @@ Las actividades orientadas al desarrollo de la ontología se agrupan en activida
 
 Una vez en el desarrollo, la actividad \textit{especificación} determina el por qué la ontología se está construyendo, para qué se usará y quiénes son los usuarios finales. La \textit{conceptualización} estructura el dominio de conocimiento en forma de modelos significativos al nivel de conocimiento, el resultado de esta actividad se ilustra en la figura \ref{fig: mapaConceptual}. 
 
-La actividad \textit{formalización} transforma el modelo conceptual en un modelo formal o semi-computable. Para formalizar la conceptualización elaborada se decidió desarrollar la ontología que se ilustra en la figura \ref{onto:hdrm}. Esta ontología cumple con el requisito definido por \cite{Calvanese2017}, el cual especifica que los elementos básicos que debe poseer una ontología diseñada con el propósito de permitir la OBDI son los definidos en la ontología \ref{onto:elementosBasicosOntologiaOBDI}.\\
+La actividad \textit{formalización} transforma el modelo conceptual en un modelo formal o semi-computable, por medio de la utilización de los constructos definidos en la Lógica Descriptiva \citep{Baader2003}. Para formalizar la conceptualización elaborada se decidió desarrollar la ontología que se ilustra en la figura \ref{onto:hdrm}. Esta ontología cumple con el requisito definido por \cite{Calvanese2017}, el cual especifica que los elementos básicos que debe poseer una ontología diseñada con el propósito de permitir la OBDI son los definidos en la ontología \ref{onto:elementosBasicosOntologiaOBDI}.\\
 
 \begin{equation}
 Concepto \equiv Thing \sqcap \exists mapeo.Literal
@@ -203,7 +209,7 @@ Otra actividad de soporte es la \textit{mezcla}, que consiste en la obtención d
 
 \subsection{Instanciación de la ontología para la integración de datos}
 
-Se ha demostrado que las ontologías de dominio pueden apoyar la extracción de conocimiento, lo que significa que el problema de extracción de información puede ser generalizado al problema de encontrar e insertar información que concuerde con una ontología en la base de conocimiento de un sistema, este proceso se conoce como ``instanciación de la ontología'' o ``poblado de la ontología'' \citep{JANNACH2009136}. Entonces la ontología instanciada puede servir como base para el desarrollo de servicios de conocimiento en la Web Semántica \citep{1179189}.
+\cite{JANNACH2009136} han demostrado que las ontologías de dominio pueden apoyar la extracción de conocimiento, lo que significa que el problema de extracción de información puede ser generalizado al problema de encontrar e insertar información que concuerde con una ontología en la base de conocimiento de un sistema, este proceso se conoce como ``instanciación de la ontología'' o ``poblado de la ontología''. Entonces la ontología instanciada puede servir como base para el desarrollo de servicios de conocimiento en la Web Semántica \citep{1179189}.
 
 La instanciación de una ontología es un proceso costoso y que consume tiempo \citep{10.1007/978-0-387-87685-6_30}, por esta razón existen enfoques automáticos \citep{1179189,JANNACH2009136} y semi-automáticos \citep{10.1007/978-0-387-87685-6_30}. La instanciación de la ontología para OBDI consiste en la representación de los conceptos identificados en el paso anterior acorde a la terminología definida por la ontología seleccionada. Debido al alto nivel de detalle que implica instanciar una ontología para OBDI se escogió realizar este proceso manualmente. 
 
