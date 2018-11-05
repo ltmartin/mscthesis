@@ -25,7 +25,7 @@ Las instanciaciones muestran cómo los constructos, modelos o métodos pueden im
 
 Es importante mencionar que para el desarrollo de esta investigación se consideraron además las guías para la investigación en ciencias del diseño, propuestas por \cite{Hevner:2004:DSI:2017212.2017217}. Estas guías, fueron establecidas con el propósito de auxiliar a investigadores, revisores, editores y lectores en la comprensión de los requerimientos para una investigación efectiva en ciencias del diseño y se sintetizan el la tabla \ref{tab: guias}.
 
-\begin{table}
+\begin{table}[H]
 \begin{tabular}{|c|c|}
 \hline 
 Guía & Descripción \\ 
@@ -77,15 +77,15 @@ En la actividad de \textit{evaluación} se observa y mide cuánto influye el art
 
 La actividad \textit{comunicación} pretende poner en conocimiento de investigadores y otras audiencias relevantes, el problema y su importancia, el artefacto, su utilidad y novedad, el rigor de su diseño y su efectividad \citep{Peffers2006}.
 
-Los resultados de la primera y segunda actividad fueron expresados en la introducción de este documento. El diseño y desarrollo incluye determinar las funcionalidades deseadas del artefacto y su arquitectura para luego crear el artefacto en cuestión. Los elementos esenciales que debe poseer una aplicación informática para el OBDA/OBDI fueron sintetizados en el subepígrafe \ref{Acceso e Integración de Datos Basado en Ontologías}. Los artefactos creados serán descritos en los epígrafes siguientes, mientras que la demostración de su eficacia en la solución del problema, así como la observación y medición de su desempeño relativos a las actividades cuatro y cinco del proceso serán expuestas en el Capítulo \ref{Capítulo 3}. Como evidencia de la comunicación a otros investigadores del problema abordado en la investigación y su relevancia, el artefacto creado, su utilidad y su efectividad, se encuentran artículos publicados en revistas y trabajos presentados en eventos por el autor de esta investigación \citep{Tabares-Martin2015,Tabares-Martin2016,Tabares-Martin20161}.
-
-\begin{figure}
+\begin{figure}[H]
 \begin{center}
 	\includegraphics[width=0.5\textwidth]{img/DSRPmodel.png}
 \end{center}
 \caption{Modelo del proceso de investigación en ciencias del diseño. Tomado de \citep{Peffers2006}}
 \label{fig: dsrp}
 \end{figure}
+
+Los resultados de la primera y segunda actividad fueron expresados en la introducción de este documento. El diseño y desarrollo incluye determinar las funcionalidades deseadas del artefacto y su arquitectura para luego crear el artefacto en cuestión. Los elementos esenciales que debe poseer una aplicación informática para el OBDA/OBDI fueron sintetizados en el subepígrafe \ref{Acceso e Integración de Datos Basado en Ontologías}. Los artefactos creados serán descritos en los epígrafes siguientes, mientras que la demostración de su eficacia en la solución del problema, así como la observación y medición de su desempeño relativos a las actividades cuatro y cinco del proceso serán expuestas en el Capítulo \ref{Capítulo 3}. Como evidencia de la comunicación a otros investigadores del problema abordado en la investigación y su relevancia, el artefacto creado, su utilidad y su efectividad, se encuentran artículos publicados en revistas y trabajos presentados en eventos por el autor de esta investigación \citep{Tabares-Martin2015,Tabares-Martin2016,Tabares-Martin20161}.
 
 El método propuesto para la Integración de Datos Basada en Ontologías se denomina OntoIntegra. Este método describe el proceso para la integración de los datos almacenados en fuentes de datos estructuralmente heterogéneas en una respuesta conceptualmente homogénea, a partir de la instanciación de una ontología creada para la OBDI. El método se basa en los constructos: consulta sintáctica e instancia de una ontología.
 
@@ -132,9 +132,9 @@ El Experto de dominio en este paso analiza cómo están físicamente distribuido
 
 En el análisis semántico de la información almacenada en cada fuente de datos se determinan los conceptos contenidos en las mismas cuyos datos asociados se desean recuperar. En este paso interviene un Experto del dominio y un Ingeniero de conocimiento. El Ingeniero de conocimiento tiene la función de traducir los elementos presentes en una fuente de datos a conceptos comprensibles por un usuario externo.
 
-En este paso un Usuario de conceptualización requiere ciertos conceptos sobre un dominio específico, esta petición se la realiza a un Experto del dominio. El Experto del dominio determina exactamente qué elementos del dominio son los que necesita el Usuario de conceptualización y se lo informa al Ingeniero de conocimiento. El Ingeniero de conocimiento modela conceptualmente los elementos recibidos en términos conocidos por el Usuario de conceptualización y retorna la conceptualización elaborada. Este proceso se ilustra en la figura \ref{fig: conceptsExtraction}.\\
+En este paso un Usuario de conceptualización requiere ciertos conceptos sobre un dominio específico, esta petición se la realiza a un Experto del dominio. El Experto del dominio determina exactamente qué elementos del dominio son los que necesita el Usuario de conceptualización y se lo informa al Ingeniero de conocimiento. El Ingeniero de conocimiento modela conceptualmente los elementos recibidos en términos conocidos por el Usuario de conceptualización y retorna la conceptualización elaborada. Este proceso se ilustra en la figura \ref{fig: conceptsExtraction}.
 
-\textbf{Proceso de desarrollo de la ontología según la metodología METHONTOLOGY}\\
+\textbf{Proceso de desarrollo de la ontología según la metodología METHONTOLOGY}
 
 El proceso de desarrollo de una ontología se refiere a cuáles actividades deben realizarse al construir una ontología \citep{Gomez-Perez:2007:OEE:1199560}. La metodología METHONTOLOGY propone la realización de tres categorías de actividades que se ilustran en la figura \ref{fig: methontology}.
 
@@ -168,22 +168,15 @@ Las actividades orientadas al desarrollo de la ontología se agrupan en activida
 
 Una vez en el desarrollo, la actividad \textit{especificación} determina el por qué la ontología se está construyendo, para qué se usará y quiénes son los usuarios finales. La \textit{conceptualización} estructura el dominio de conocimiento en forma de modelos significativos al nivel de conocimiento, el resultado de esta actividad se ilustra en la figura \ref{fig: mapaConceptual}. 
 
-La actividad \textit{formalización} transforma el modelo conceptual en un modelo formal o semi-computable, por medio de la utilización de los constructos definidos en la Lógica Descriptiva \citep{Baader2003}. Para formalizar la conceptualización elaborada se decidió desarrollar la ontología que se ilustra en la figura \ref{onto:hdrm}. Esta ontología cumple con el requisito definido por \cite{Calvanese2017}, el cual especifica que los elementos básicos que debe poseer una ontología diseñada con el propósito de permitir la OBDI son los definidos en la ontología \ref{onto:elementosBasicosOntologiaOBDI}.\\
-
-\begin{equation}
-Concepto \equiv Thing \sqcap \exists mapeo.Literal
-\label{onto:elementosBasicosOntologiaOBDI}
-\end{equation}
-
-La actividad de \textit{implementación} construye modelos computables en un lenguaje de ontologías \citep{Gomez-Perez:2007:OEE:1199560}. Este modelo se construyó utilizando el Lenguaje de Ontologías Web por medio de la herramienta Protégé y se ilustra en la figura \ref{fig: ontologiaProtege}.\\
-
-\begin{figure}
+\begin{figure}[H]
 \begin{center}
 	\includegraphics[width=0.8\textwidth]{img/mapaConceptual.png}
 \end{center}
 \caption{Conceptualización de los elementos del dominio de conocimiento}
 \label{fig: mapaConceptual}
 \end{figure}
+
+La actividad \textit{formalización} transforma el modelo conceptual en un modelo formal o semi-computable, por medio de la utilización de los constructos definidos en la Lógica Descriptiva \citep{Baader2003}. Para formalizar la conceptualización elaborada se decidió desarrollar la ontología que se ilustra en la figura \ref{onto:hdrm}. Esta ontología cumple con el requisito definido por \cite{Calvanese2017}, el cual especifica que los elementos básicos que debe poseer una ontología diseñada con el propósito de permitir la OBDI son los definidos en la ontología \ref{onto:elementosBasicosOntologiaOBDI}.\\
 
 \begin{minipage}{\textwidth}
 $Concept \ \equiv \ Thing \ \sqcap \ \exists  mappedTo.Literal \ \sqcap \ =1 mappedTo \ \sqcap \exists  type.Literal \ \sqcap \ =1 type \ \sqcap \ \exists name.String \sqcap \ =1 name$ \\
@@ -193,11 +186,18 @@ $Datasource \ \equiv \ Thing \ \sqcap \ \exists composedBy.Concept \ \sqcap \ \e
 \label{onto:hdrm}
 \end{minipage}\\
 
+\begin{equation}
+Concepto \equiv Thing \sqcap \exists mapeo.Literal
+\label{onto:elementosBasicosOntologiaOBDI}
+\end{equation}
+
+La actividad de \textit{implementación} construye modelos computables en un lenguaje de ontologías \citep{Gomez-Perez:2007:OEE:1199560}. Este modelo se construyó utilizando el Lenguaje de Ontologías Web por medio de la herramienta Protégé y se ilustra en la figura \ref{fig: ontologiaProtege}.
+
 \begin{figure}
 \begin{center}
 	\includegraphics[width=0.5\textwidth]{img/ontologiaProtege.png}
 \end{center}
-\caption{Ontología construida con la herramienta Protégé}
+\caption{Clases de la ontología construida con la herramienta Protégé}
 \label{fig: ontologiaProtege}
 \end{figure}
 
@@ -232,7 +232,7 @@ Conzilla & 2.2 & Grupo de investigaciones & Navegador de  & Java & Sí \\
 HOZO & 5.6 & Universidad de & Amigable al & Java & Sí \\ 
  & & Osaka & usuario & & \\
 \hline 
-Protégé & 5.1.0 & Universidad de Stanford & Herencia múltiple & Java & Sí \\ 
+Protégé & 5.5.0 & Universidad de Stanford & Herencia múltiple & Java & Sí \\ 
 \hline 
 \end{tabular} 
 \caption{Editores de ontologías}

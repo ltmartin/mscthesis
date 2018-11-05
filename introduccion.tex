@@ -39,7 +39,7 @@ El proyecto ``Las Tecnologías de la Información y la Comunicación apoyando lo
 
 Los sistemas integrados de gestión bibliotecaria, para la gestión de repositorios digitales, para la gestión de investigaciones y entornos virtuales de aprendizaje forman parte del modelo de referencia de ELINF como se ilustra en la figura \ref{fig: referenceModel} y contribuyen a la realización de estos objetivos. Las herramientas informáticas que constituyen la instanciación del modelo ilustrado en la figura \ref{fig: referenceModel} gestionan, entre otros elementos, artículos científicos y libros.
 
-\begin{figure}
+\begin{figure}[H]
 \begin{center}
 	\includegraphics[width=0.5\textwidth]{img/referenceModel.png}
 \end{center}
@@ -90,9 +90,9 @@ Con el propósito de contribuir a la solución de este problema en el pasado se 
 
 Un enfoque para la integración de datos empresariales provenientes de fuentes heterogéneas de datos y descentralizadas es la mediación semántica. Este enfoque por una parte elimina la necesidad de un repositorio central de datos o un esquema federado para todos los datos y, por otra parte, introduce una capa semántica encima de las descripciones de estructuras de datos sintácticas existentes para evitar los conflictos semánticos en la integración \citep{ElKadiri2015}. 
 
-Con el advenimiento de la Web \citep{berners1990worldwideweb}, la gestión de datos se enfocó en la variedad de información disponible en este nuevo medio. \cite{Janev2011} plantearon que las tecnologías semánticas se utilizan en su mayoría para la integración de datos y para mejorar las búsquedas. Según \citep{Hoang2014}, la integración de datos guiada por ontologías representa una solución flexible, sostenible y extensible. Un paradigma reciente que combina la posibilidad de utilizar razonamiento sobre el conocimiento de un dominio codificado en una ontología, con un mecanismo que permite el uso de la misma ontología para un acceso integrado de alto nivel a las fuentes de datos es el Acceso e Integración de Datos Basado en Ontologías (``Ontology-Based Data Access and Integration'' - OBDA/OBDI, por sus siglas de acuerdo al término en idioma inglés) \citep{Calvanese2016,Calvanese2017}.
+Con el advenimiento de la Web \citep{berners1990worldwideweb}, la gestión de datos se enfocó en la variedad de información disponible en este nuevo medio. \cite{Janev2011} plantearon que las tecnologías semánticas se utilizan en su mayoría para la integración de datos y para mejorar las búsquedas. Según \citep{Hoang2014}, la integración de datos guiada por ontologías representa una solución flexible, sostenible y extensible. Un paradigma reciente que combina la posibilidad de utilizar razonamiento sobre el conocimiento de un dominio codificado en una ontología, con un mecanismo que permite el uso de la misma ontología para un acceso integrado de alto nivel a las fuentes de datos, es el Acceso e Integración de Datos Basado en Ontologías (``Ontology-Based Data Access and Integration'' - OBDA/OBDI, por sus siglas de acuerdo al término en idioma inglés) \citep{Calvanese2016,Calvanese2017}.
 
-Para la realización del control de autoridades a nivel internacional se comparten ficheros utilizando el formato RDF \citep{Sandberg2016}, se exponen servicios en la Web \citep{ORCID2017}, se crean bases de datos locales que luego se exponen por medio de aplicaciones informáticas en la Web \citep{OCLCOnlineComputerLibraryCenterInc.2014}. La variedad de enfoques utilizados para contribuir a la realización del control de autoridades provoca heterogeneidad estructural entre las fuentes de datos utiizadas en el proceso.
+Para la realización del control de autoridades a nivel internacional se comparten ficheros utilizando el formato RDF \citep{Sandberg2016}, se exponen servicios en la Web \citep{ORCID2017}, se crean bases de datos locales que luego se exponen por medio de aplicaciones informáticas en la Web \citep{OCLCOnlineComputerLibraryCenterInc.2014}. La variedad de enfoques utilizados para contribuir a la realización del control de autoridades provoca heterogeneidad estructural entre las fuentes de datos utilizadas en el proceso.
 
 Teniendo en cuenta la heterogeneidad estructural de las fuentes de datos disponibles actualmente para realizar el control de autoridades en el proyecto ELINF se establece como \textbf{problema de investigación} el siguiente: ¿Cómo integrar los datos relativos al control de autoridades almacenados de forma heterogénea en las fuentes de datos utilizadas por el proyecto ELINF?
 
@@ -110,8 +110,7 @@ Se plantea como \textbf{hipótesis de la investigación} que, el desarrollo de u
 
 A partir de la hipótesis se identifica como variable independiente el \textbf{método con componentes semánticos} el cual se define como el conjunto de actividades \citep{Offermann2010} que permitirá conducir el proceso de descripción e integración de datos almacenados de forma heterogénea. Como variable dependiente se identifica la \textbf{integración de los datos relativos al control de autoridades} almacenados en las fuentes de datos utilizadas por el proyecto ELINF, definiéndose esta como la capacidad de mostrar en una vista conceptualmente homogénea datos de autoridades almacenados en fuentes heterogéneas de datos.
 
-
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{c|c|c}
 \hline 
@@ -129,7 +128,6 @@ relativos al control de autoridades & & fuentes de datos requeridas que  \\
 \caption{Operacionalización de las variables de la investigación}
 \end{table}
 
-
 Durante toda la investigación se utilizará el método analítico - sintético, el mismo permitirá descomponer las problemáticas que se presenten en sus componentes y relaciones. La síntesis permitirá descubrir las relaciones esenciales existentes entre los componentes de las problemáticas contribuyendo a la sistematización del conocimiento. 
 
 El método inductivo - deductivo posee especial relevancia en la formulación de la hipótesis y en la elaboración de conclusiones lógicas. Por medio del método histórico - lógico será posible representar los elementos del estado del arte relevantes a la temática en un orden cronológico que permita comprender la evolución de la misma.
@@ -144,4 +142,4 @@ El capítulo 1 aborda los principales referentes teóricos que soportan la integ
 
 En el capítulo 2 se identifica el paradigma utilizado en el desarrollo del método propuesto, se realiza la definición del método OntoIntegra a la vez que se describen cada uno de sus componentes. Se detalla el proceso de desarrollo de la ontología creada según la metodología seleccionada, generando cada uno de los artefactos definidos.
 
-El capítulo 3 relata la selección de la estrategia de evaluación, la preparación del caso de estudio, su diseño con cada una de las etapas que lo componen. Se realiza un análisis de los datos recolectados que permite comprobar la validez de la hipótesis formulada para conducir la investigación.
+El capítulo 3 relata la selección de la estrategia de validación, la preparación del caso de estudio, su diseño con cada una de las etapas que lo componen. Se realiza un análisis de los datos recolectados que permite comprobar la validez de la hipótesis formulada para conducir la investigación.
